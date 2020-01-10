@@ -1,0 +1,10 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { withKnobs } from '@storybook/addon-knobs/react';
+import { {{ pascalCase name }} } from '@ci/{{ packageName }}';
+
+storiesOf('{{ pascalCase name }}', module)
+	.addDecorator(withKnobs)
+	.addParameters({ info: 'Info for {{ pascalCase name }}'})
+	.add('in default', () => <{{ pascalCase name }} />);
