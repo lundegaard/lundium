@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid /> container 1`] = `
+<forwardRef(Box)
+  className="container"
+/>
+`;
+
+exports[`<Grid /> row 1`] = `
+<forwardRef(Box)
+  className="row"
+/>
+`;
+
+exports[`<Grid /> shallow 1`] = `
+<forwardRef(Box)
+  className=""
+/>
+`;

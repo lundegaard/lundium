@@ -26,6 +26,7 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 		path: path.resolve(`${lundiumPackagePath}/dist`),
+		libraryTarget: 'umd',
 	},
 	module: {
 		rules: [
@@ -36,5 +37,6 @@ module.exports = {
 			},
 		],
 	},
+	// In case of troubleshooting: https://github.com/lerna/lerna/issues/1049
 	externals: ['react', 'react-dom'],
 };
