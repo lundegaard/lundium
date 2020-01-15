@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> shallow 1`] = `
+<forwardRef(Text)
+  as="i"
+  className="icon icon--type-add icon--size-14 color-dark"
+  color="dark"
+/>
+`;

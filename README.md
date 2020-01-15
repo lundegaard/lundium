@@ -6,8 +6,6 @@ React UI Library for fast web development
 
 `yarn start`
 
-## Importing into your porject
-
 ## Generate documentation
 
 `yarn build:storybook`
