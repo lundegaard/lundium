@@ -1,12 +1,31 @@
 const path = require('path');
 
+const glob = require('glob');
+
+const packagePath = process.cwd();
+const lundiumPackagePath = './packages/lundium';
+const relativeSrcPath = `${lundiumPackagePath}/src/components`;
+const srcPath = path.join(packagePath, relativeSrcPath);
+
+const directoryPackages = glob.sync('**/index.js', { cwd: srcPath }).map(path.dirname);
+
+const entries = directoryPackages.reduce(
+	(entries, newEntry) => ({
+		...entries,
+		[newEntry]: `${relativeSrcPath}/${newEntry}/index.js`,
+	}),
+	{}
+);
+
 module.exports = {
+	mode: 'production',
 	entry: {
-		components: './packages/lundium/index.js',
+		index: `${lundiumPackagePath}/src/index.js`,
+		...entries,
 	},
 	output: {
-		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist'),
+		filename: '[name].js',
+		path: path.resolve(`${lundiumPackagePath}/dist`),
 	},
 	module: {
 		rules: [
@@ -15,35 +34,7 @@ module.exports = {
 				exclude: /node_modules/,
 				loader: 'babel-loader',
 			},
-			{
-				test: /\.s?css$/,
-				use: [
-					{ loader: 'style-loader' },
-					{
-						loader: 'css-loader',
-						options: {
-							sourceMap: true,
-							modules: true,
-							localIdentName: '[local]_[hash:base64:5]',
-						},
-					},
-					{
-						loader: 'postcss-loader',
-						options: {
-							sourceMap: true,
-							config: {
-								path: 'postcss.config.js',
-							},
-						},
-					},
-					{
-						loader: 'sass-loader',
-						options: { sourceMap: true },
-					},
-				],
-			},
 		],
 	},
-	externals: ['react'],
-	devtool: 'cheap-module-eval-source-map',
+	externals: ['react', 'react-dom'],
 };

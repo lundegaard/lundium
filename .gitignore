@@ -2,6 +2,7 @@ public
 build
 lib
 dist
+stats.json
 
 apps/**/lib
 apps/**/build
