@@ -1,10 +1,10 @@
 {
-	"name": "@lundium/components",
+	"name": "lundium",
 	"version": "0.0.1",
 	"license": "UNLICENSED",
 	"description": "Components",
-	"main": "./src/index.js",
-	"scripts": {},
+	"main": "./dist",
+	"sideEffects": false,
 	"dependencies": {
 		"ramda": "^0.26.1",
 		"ramda-extension": "^0.10.1"
