@@ -38,11 +38,6 @@ const DIMENSIONS = [
 	'order',
 ];
 
-const dimensionsPropTypes = DIMENSIONS.reduce(
-	(propTypes, dimension) => ({ ...propTypes, [dimension]: responsiveStringOrNumberPropType }),
-	{}
-);
-
 const Box = forwardRef(
 	(
 		{ children, as: Comp = 'div', className, display, strictAttributes, elementProps, ...rest },
@@ -82,6 +77,11 @@ const responsiveStringOrNumberPropType = PropTypes.oneOfType([
 	stringOrNumberArrayPropType,
 	stringOrNumberObjectPropType,
 ]);
+
+const dimensionsPropTypes = DIMENSIONS.reduce(
+	(propTypes, dimension) => ({ ...propTypes, [dimension]: responsiveStringOrNumberPropType }),
+	{}
+);
 
 Box.propTypes = {
 	/** Tag used for root component */

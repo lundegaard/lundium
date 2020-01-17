@@ -28,3 +28,9 @@ import { Box, Grid } from 'lundium';
 - InlineText
 - Link
 - Text
+
+## Theming
+
+Basic components contain a set of classnames that can be customized and styled.
+
+For default theme please refer to @lundium/theme-default

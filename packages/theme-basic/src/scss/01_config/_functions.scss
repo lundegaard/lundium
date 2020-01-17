@@ -1,0 +1,58 @@
+/*
+ -	Theme Functions
+ */
+
+
+/*  Replace `$search` with `$replace` in `$string`
+ -  Used on our SVG icon backgrounds for custom forms.
+ -
+ -  @author Hugo Giraudel
+ -  @param {String} $string - Initial string
+ -  @param {String} $search - Substring to replace
+ -  @param {String} $replace ('') - New value
+ -  @return {String} - Updated string
+ */
+
+@function str-replace ($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+
+/*
+ -  Font color based on the background of element
+ -
+ -  @param {String} $bg-color - Background color
+ -  @return {String} - Appropriate font color
+ */
+
+@function set-color-by-bg ($bg-color: transparent) {
+	@if (lightness($bg-color) > 50) {
+		// Lighter backgorund, return dark color
+		@return $body-color;
+	} @else {
+		// Darker background, return light color
+		@return $theme-white;
+	}
+}
+
+
+/*
+ -  Strip unit from any value
+ -
+ -  @param {String} $bg-color - Background color
+ -  @return {String} - Appropriate font color
+ */
+
+@function strip-unit ($number) {
+	@if (type-of($number) == 'number' and not unitless($number)) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}

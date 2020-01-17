@@ -1,0 +1,31 @@
+/*
+ -  Master styles
+ -
+ -  This file defines <html> and <body> styles.
+ */
+
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: $font-size-base;
+	-webkit-overflow-scrolling: touch;
+
+	&.modal-open {
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+	}
+
+	// Bootstrap reboot sets text-align: left
+	&:dir(rtl) {
+		text-align: right;
+	}
+}
+
+html,
+body {
+	@include selection;
+}
