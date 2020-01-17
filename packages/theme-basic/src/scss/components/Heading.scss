@@ -1,0 +1,47 @@
+@import '../core';
+
+/*
+ -  Headings
+ -  (<h* class="h*" />)
+ */
+
+
+h1,
+.h1 {
+	font-weight: $headings-font-weight;
+	margin-block-end: $h1-margin-bottom;
+	text-align: start;
+	font-size: $h1-font-size-mobile;
+	line-height: $h1-line-height-mobile;
+
+	// Media queries
+	@include media-breakpoint-up(sm) {
+		font-size: $h1-font-size;
+	}
+	@include media-breakpoint-up(md) {
+		line-height: $h1-line-height;
+	}
+}
+
+h2,
+.h2 {
+	font-weight: $headings-font-weight;
+	margin-block-end: $h2-margin-bottom;
+	text-align: start;
+	font-size: $h2-font-size-mobile;
+	line-height: $h2-line-height-mobile;
+
+	// Media queries
+	@include media-breakpoint-up(sm) {
+		font-size: $h2-font-size;
+		line-height: $h2-line-height;
+	}
+}
+
+h3,
+.h3 {
+	margin-block-end: $h3-margin-bottom;
+	font-size: $h3-font-size;
+	text-align: start;
+	font-weight: 400;
+}

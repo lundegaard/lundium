@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HtmlDirection /> matches snapshot when shallowly rendered 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "dir": "ltr",
+    }
+  }
+/>
+`;

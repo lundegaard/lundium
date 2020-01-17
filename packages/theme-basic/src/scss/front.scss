@@ -1,0 +1,39 @@
+/*!
+ *  Front UI-components
+ *
+ *  This file includes and describes all used styles.
+ */
+
+/* -------------------------- */
+/*   1. CONFIG,BASE,VENDORS   */
+/* -------------------------- */
+
+@import '01_config/functions';                                           // Functions
+@import '01_config/variables';                                           // Variables
+@import '01_vendors/bootstrap_init';                                     // Bootstrap 4.1.0 (http://getbootstrap.com)
+@import '~bootstrap/scss/reboot';                                        // Bootstrap Reboot
+
+
+// Import utilities separately, spacing and others needs to be custom to support [dir="rtl"] and logical properties
+@import '~bootstrap/scss/utilities/align';
+@import '~bootstrap/scss/utilities/background';
+@import '~bootstrap/scss/utilities/display';
+@import '~bootstrap/scss/utilities/flex';
+@import '~bootstrap/scss/utilities/overflow';
+@import '~bootstrap/scss/utilities/position';
+@import '~bootstrap/scss/utilities/screenreaders';
+@import '~bootstrap/scss/utilities/sizing';
+@import '~bootstrap/scss/utilities/text';
+@import '~bootstrap/scss/utilities/visibility';
+// @import '~bootstrap/scss/utilities/shadows';
+
+@import '01_config/mixins';                                              // Mixins
+@import '01_base/html';                                                  // HTML and Body styles
+@import '01_base/master';                                                // Master styles
+@import '01_base/typography';                                            // Typography
+@import '01_base/utilities';                                             // Custom utilities
+
+// Import components stylesheets
+@import './components/Grid.scss';
+@import './components/Heading.scss';
+// @import './components/Icon.scss';

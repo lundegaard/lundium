@@ -9,7 +9,7 @@ const border = {
 	padding: '8px',
 };
 
-export const basic = () => (
+export const withResponsiveStyles = () => (
 	<Grid container fluid={boolean('fluid', false)}>
 		<Grid row>
 			<Grid col={[4]}>
@@ -30,6 +30,27 @@ export const basic = () => (
 				<div style={border}>B</div>
 			</Grid>
 			<Grid col={[12, 12, 12, 4]}>
+				<div style={border}>C</div>
+			</Grid>
+		</Grid>
+	</Grid>
+);
+
+export const offsetSupport = () => (
+	<Grid container fluid={boolean('fluid', false)}>
+		<Grid row>
+			<Grid col={[4]}>
+				<div style={border}>A</div>
+			</Grid>
+			<Grid col={[4]} offset={[4]}>
+				<div style={border}>C</div>
+			</Grid>
+		</Grid>
+		<Grid row>
+			<Grid col={[4, 3]}>
+				<div style={border}>A</div>
+			</Grid>
+			<Grid col={[4, 3, 1]} offset={[4, 6, 8]}>
 				<div style={border}>C</div>
 			</Grid>
 		</Grid>
