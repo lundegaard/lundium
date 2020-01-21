@@ -10,6 +10,7 @@
 	},
 	"dependencies": {
 		"@lundium/theme-basic": "^0.0.1",
+		"@lundium/locale": "^0.0.1",
 		"lundium": "^0.0.1",
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0"

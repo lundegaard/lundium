@@ -30,7 +30,6 @@ module.exports = {
 					'*.config.js',
 					'apps/**/*.config.js',
 					'packages/**/*.config.js',
-					'webpackBuildPackage.js',
 				],
 			},
 		],
