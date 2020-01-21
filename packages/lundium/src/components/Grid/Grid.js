@@ -15,9 +15,9 @@ import {
 	responsiveBoolPropType,
 	responsiveNumberPropType,
 	responsiveStringOrNumberPropType,
-} from '../../../utils/types';
-import getResponsivePropType from '../../../utils/getResponsivePropType';
-import propToClassName from '../../../utils/propToClassName';
+} from '../../utils/types';
+import getResponsivePropType from '../../utils/getResponsivePropType';
+import propToClassName from '../../utils/propToClassName';
 import Box from '../Box';
 
 const isValidFlexWrap = flipIncludes(['wrap', 'nowrap']);

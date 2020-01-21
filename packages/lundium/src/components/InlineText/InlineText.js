@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../Text';
 
-const InlineText = ({ as = 'span', ...props }) => <Text {...props} as={as} />;
+const InlineText = ({ as = 'span', ...rest }) => <Text {...rest} as={as} />;
 
 InlineText.propTypes = {
 	/** Tag used for root component */

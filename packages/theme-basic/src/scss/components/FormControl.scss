@@ -1,0 +1,52 @@
+@import '../scss/core';
+
+/*
+ -  Form control
+ -  (<input class="form-control" type="*" />)
+ */
+
+
+.form-control {
+	&:not(:disabled):not(:read-only):hover {
+		border-color: $input-hover-border-color;
+	}
+
+	&[disabled],
+	&[readonly],
+	&[disabled] + .control-label,
+	&[readonly] + .control-label {
+		color: $control-label-disabled-color;
+	}
+
+	&.is-invalid,
+	&:invalid {
+		color: $input-invalid-color;
+		background: $input-bg;
+		padding-right: $input-padding-x;
+	}
+
+	&.form-control--editable {
+		padding: logical 0;
+		height: auto;
+	}
+
+	&.empty-checkbox + .control-label {
+		text-indent: -9999px;
+		width: 0;
+	}
+
+
+	&__legend {
+		position: absolute;
+		font-size: 1.2rem;
+		inset-inline-end: ( $spacer * .75 );
+		transform: translateY(4px);
+		color: $info;
+	}
+
+	&::-ms-clear,
+	&::-ms-reveal {
+		display: none;
+	}
+}
+

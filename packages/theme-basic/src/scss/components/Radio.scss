@@ -1,0 +1,128 @@
+@import '../../scss/core';
+
+/*
+ -  Radio
+ -  (<input type="radio" class="form-control" />)
+ */
+
+
+.form-group--radio {
+	position: relative;
+	display: block;
+	min-height: 20px;
+	padding-block-start: 0;
+	padding-inline-start: ( $custom-control-gutter + $custom-control-indicator-size );
+
+	.control-label {
+		position: relative;
+		margin-block-end: 0;
+		vertical-align: middle;
+		padding-inline-start: 0;
+		font-size: $control-label-font-size;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset-block-start: ( $font-size-base * $line-height-base - $custom-control-indicator-size ) / 2;
+			inset-inline-start: -( $custom-control-gutter + $custom-control-indicator-size );
+			width: $custom-control-indicator-size;
+			height: $custom-control-indicator-size;
+			display: block;
+			pointer-events: none;
+			background-color: $custom-control-indicator-bg;
+			border: $custom-control-indicator-border-color solid $custom-control-indicator-border-width;
+			box-shadow: $custom-control-indicator-box-shadow;
+			border-radius: $custom-radio-indicator-border-radius;
+			transition: all $transition-speed $transition-easing;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset-block-start: ( $font-size-base * $line-height-base - $custom-control-indicator-size ) / 2;
+			inset-inline-start: -( $custom-control-gutter + $custom-control-indicator-size );
+			display: block;
+			width: $custom-control-indicator-size;
+			height: $custom-control-indicator-size;
+			background: no-repeat 50% / 70% 70%;
+		}
+	}
+
+	.form-control {
+		position: absolute;
+		height: auto;
+		z-index: -1;
+		opacity: 0;
+
+		&:checked ~ .control-label::before {
+			color: $custom-control-indicator-checked-color;
+			border-color: $custom-control-indicator-checked-border-color;
+			background-color: $input-focused-bg;
+			box-shadow: $custom-control-indicator-checked-box-shadow;
+		}
+
+		&:checked ~ .control-label::after {
+			background-image: $custom-radio-indicator-icon-checked;
+		}
+
+		/* &:indeterminate ~ .control-label {
+			&::before {
+				border-color: $custom-checkbox-indicator-indeterminate-border-color;
+				@include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
+				box-shadow: $custom-checkbox-indicator-indeterminate-box-shadow;
+			}
+
+			&::after {
+				background-image: $custom-checkbox-indicator-icon-indeterminate;
+			}
+		} */
+
+		&:focus ~ .control-label::before {
+			box-shadow: $custom-control-indicator-focus-box-shadow;
+		}
+
+		&:focus:not(:checked) ~ .control-label::before {
+			border-color: $custom-control-indicator-focus-border-color;
+		}
+
+		&:not(:disabled):active ~ .control-label::before {
+			color: $custom-control-indicator-active-color;
+			background-color: $custom-control-indicator-active-bg;
+			border-color: $custom-control-indicator-active-border-color;
+			box-shadow: $custom-control-indicator-active-box-shadow;
+		}
+
+		&:not(:disabled):not(:read-only) ~ .control-label {
+			cursor: pointer;
+
+			&:hover {
+				&::before {
+					border-color: $input-hover-border-color;
+				}
+			}
+		}
+
+		&:disabled {
+			&:checked ~ .control-label::before {
+				background-color: $custom-control-indicator-checked-disabled-bg;
+				border-color: $custom-select-indicator-disabled-color;
+			}
+
+			&:checked ~ .control-label::after {
+				background-image: $custom-radio-indicator-icon-checked-disabled;
+			}
+
+			/* &:indeterminate ~ .custom-control-label::before {
+				background-color: $custom-control-indicator-checked-disabled-bg;
+			} */
+
+			~ .control-label {
+				color: $control-label-disabled-color;
+
+				&::before {
+					background-color: $custom-control-indicator-disabled-bg;
+				}
+			}
+		}
+	}
+}

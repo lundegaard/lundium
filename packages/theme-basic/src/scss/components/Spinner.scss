@@ -1,0 +1,66 @@
+@import '../../scss/core';
+
+/*
+ -  Loading spinner
+ -  (<div class="loader" />)
+ */
+
+
+.loader {
+	width: 60px;
+	height: 60px;
+	margin-inline-end: $spacer;
+	stroke-linecap: round;
+	stroke-width: 6;
+	fill: none;
+
+	&--sm {
+		height: 16px;
+		width: 16px;
+	}
+
+	.loader-circle {
+		stroke: $theme-blue;
+		// stroke-dashoffset: 0;
+		transform-origin: center;
+		animation: loadingAnim 1.8s ease-in-out infinite;
+
+		&:dir(rtl) {
+			animation-direction: reverse;
+		}
+	}
+}
+
+@keyframes loadingAnim {
+	0% {
+		stroke-dasharray: 1, 200;
+		stroke-dashoffset: 0;
+		transform: rotate(0);
+		stroke: $theme-blue;
+	}
+	50% {
+		stroke-dasharray: 89, 200;
+		stroke-dashoffset: -35;
+		stroke: $theme-green;
+	}
+	100% {
+		stroke-dasharray: 89, 200;
+		stroke-dashoffset: -124;
+		transform: rotate(360deg);
+		stroke: $theme-blue;
+	}
+}
+
+.fade-in {
+	animation: fadeIn 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

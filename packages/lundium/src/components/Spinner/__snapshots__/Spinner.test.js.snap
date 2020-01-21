@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner /> matches snapshot when shallowly rendered 1`] = `
+<forwardRef(Grid)
+  alignItems="center"
+  className="data-status"
+  justifyContent="center"
+>
+  <svg
+    className="loader"
+    viewBox="0 0 60 60"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      className="loader-circle"
+      cx="30"
+      cy="30"
+      r="20"
+      stroke="#70c542"
+      strokeWidth="3"
+    />
+  </svg>
+  <forwardRef(Text)
+    mb={0}
+  >
+    <div>
+      Loading data
+    </div>
+  </forwardRef(Text)>
+</forwardRef(Grid)>
+`;

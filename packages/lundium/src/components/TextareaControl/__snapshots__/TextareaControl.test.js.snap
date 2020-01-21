@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextareaControl /> shallow 1`] = `
+<FormControl
+  className=""
+  component="textarea"
+  name="textarea-control"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  type="text"
+/>
+`;

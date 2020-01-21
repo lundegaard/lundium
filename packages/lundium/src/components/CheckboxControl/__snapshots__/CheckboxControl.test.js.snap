@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxControl /> shallow 1`] = `
+<FormControl
+  component="input"
+  name="checkbox-control"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  type="checkbox"
+/>
+`;
