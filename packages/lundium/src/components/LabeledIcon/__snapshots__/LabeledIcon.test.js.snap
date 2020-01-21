@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LabeledIcon /> matches snapshot when shallowly rendered 1`] = `
+<Fragment>
+  <forwardRef(Text)
+    align="right"
+    as="span"
+  />
+  <Icon
+    className=""
+    ml={3}
+    mr={2}
+    type="add"
+  />
+</Fragment>
+`;

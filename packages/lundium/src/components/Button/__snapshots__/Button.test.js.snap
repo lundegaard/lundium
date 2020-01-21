@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> matches snapshot when shallowly rendered 1`] = `
+<forwardRef(Text)
+  as="button"
+  className="btn btn-default"
+  onClick={[Function]}
+  type="button"
+/>
+`;

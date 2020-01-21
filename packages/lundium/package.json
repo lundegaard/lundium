@@ -6,9 +6,11 @@
 	"main": "./dist",
 	"sideEffects": false,
 	"dependencies": {
+		"invariant": "^2.2.4",
 		"ramda": "^0.26.1",
 		"ramda-extension": "^0.10.1",
-		"react-helmet": "^5.2.1"
+		"react-helmet": "^5.2.1",
+		"react-popper-tooltip": "^2.10.1"
 	},
 	"devDependencies": {
 		"enzyme": "^3.11.0"

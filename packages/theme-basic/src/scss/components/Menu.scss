@@ -1,0 +1,27 @@
+@import '../../scss/core';
+
+/*
+ -  Menu
+ */
+
+
+.menu {
+	position: absolute;
+	width: 100%;
+	max-height: $menu-max-height;
+	margin: logical ( -$input-border-width * 2 ) 0 0;
+	padding: logical ( $input-border-width * 2 ) 0 0;
+	list-style-type: none;
+	border-block-start: none;
+	background-color: $menu-bg;
+	border-radius: 0 0 $border-radius $border-radius;
+	box-shadow: $box-shadow-dropdown;
+	color: $body-color;
+	overflow-x: hidden;
+	overflow-y: auto;
+	z-index: $zindex-popover;
+
+	&--no-gutters {
+		margin: 0;
+	}
+}

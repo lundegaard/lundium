@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { compose, filter, fromPairs, map, omit, test, toPairs } from 'ramda';
 import { cx, isNilOrEmptyString } from 'ramda-extension';
 
-import classNamesByBreakpoint from '../../../utils/classNamesByBreakpoint';
+import classNamesByBreakpoint from '../../utils/classNamesByBreakpoint';
+import responsiveStringOrNumberPropType from '../../utils/types/responsiveStringOrNumberPropType';
 
 const propToClassName = prefix =>
 	classNamesByBreakpoint(
@@ -40,7 +41,7 @@ const DIMENSIONS = [
 
 const Box = forwardRef(
 	(
-		{ children, as: Comp = 'div', className, display, strictAttributes, elementProps, ...rest },
+		{ children, as: Comp = 'div', className, display, hasStrictAttributes, elementProps, ...rest },
 		ref
 	) => (
 		<Comp
@@ -50,7 +51,7 @@ const Box = forwardRef(
 				className
 			)}
 			ref={ref}
-			{...(strictAttributes ? omitInvalidProps(rest) : omit(DIMENSIONS, rest))}
+			{...(hasStrictAttributes ? omitInvalidProps(rest) : omit(DIMENSIONS, rest))}
 			{...elementProps}
 		>
 			{children}
@@ -59,24 +60,6 @@ const Box = forwardRef(
 );
 
 Box.displayName = 'forwardRef(Box)';
-
-const stringOrNumberPropType = PropTypes.oneOfType([PropTypes.string, PropTypes.number]);
-
-const stringOrNumberArrayPropType = PropTypes.arrayOf(stringOrNumberPropType);
-
-const stringOrNumberObjectPropType = PropTypes.shape({
-	xs: stringOrNumberPropType,
-	sm: stringOrNumberPropType,
-	md: stringOrNumberPropType,
-	lg: stringOrNumberPropType,
-	xl: stringOrNumberPropType,
-});
-
-const responsiveStringOrNumberPropType = PropTypes.oneOfType([
-	stringOrNumberPropType,
-	stringOrNumberArrayPropType,
-	stringOrNumberObjectPropType,
-]);
 
 const dimensionsPropTypes = DIMENSIONS.reduce(
 	(propTypes, dimension) => ({ ...propTypes, [dimension]: responsiveStringOrNumberPropType }),
@@ -92,7 +75,7 @@ Box.propTypes = {
 	className: PropTypes.string,
 	display: responsiveStringOrNumberPropType,
 	elementProps: PropTypes.object,
-	strictAttributes: PropTypes.bool,
+	hasStrictAttributes: PropTypes.bool,
 	...dimensionsPropTypes,
 };
 

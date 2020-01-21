@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'ramda-extension';
 
-import classNamesByBreakpoint from '../../../utils/classNamesByBreakpoint';
+import classNamesByBreakpoint from '../../utils/classNamesByBreakpoint';
 import Box from '../Box';
 
 const alignToClassName = classNamesByBreakpoint((align, breakpoint) =>
@@ -11,13 +11,13 @@ const alignToClassName = classNamesByBreakpoint((align, breakpoint) =>
 
 const Text = forwardRef(
 	(
-		{ align, as = 'p', children, wrap, transform, className, color, weight, size, ...otherProps },
+		{ align, as = 'p', children, wrap, transform, className, color, weight, size, ...rest },
 		ref
 	) => (
 		<Box
 			ref={ref}
 			as={as}
-			{...otherProps}
+			{...rest}
 			className={cx(
 				className,
 				{

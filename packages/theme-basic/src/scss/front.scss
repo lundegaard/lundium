@@ -34,6 +34,21 @@
 @import '01_base/utilities';                                             // Custom utilities
 
 // Import components stylesheets
+// @import './components/Icon.scss';
+@import './components/Backdrop.scss';
+@import './components/Button.scss';
+@import './components/Checkbox.scss';
+@import './components/FormControl.scss';
+@import './components/FormGroup.scss';
+@import './components/FormText.scss';
 @import './components/Grid.scss';
 @import './components/Heading.scss';
-// @import './components/Icon.scss';
+@import './components/Label.scss';
+@import './components/Menu.scss';
+@import './components/MenuItem.scss';
+@import './components/Modal.scss';
+@import './components/Radio.scss';
+@import './components/Spinner.scss';
+@import './components/Textarea.scss';
+@import './components/Toggle.scss';
+@import './components/Tooltip.scss';

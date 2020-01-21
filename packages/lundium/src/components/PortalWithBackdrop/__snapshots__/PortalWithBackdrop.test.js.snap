@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PortalWithBackdrop /> shallow 1`] = `
+<Portal
+  container={<body />}
+>
+  <Backdrop>
+    <div />
+  </Backdrop>
+</Portal>
+`;

@@ -1,0 +1,125 @@
+@import '../../scss/core';
+@import '~bootstrap/scss/buttons';
+
+/*
+ -  Buttons
+ -  (<button class="btn" />)
+ */
+
+
+.btn {
+	min-width: 130px;
+	// Offset padding to center font line height (Open sans)
+	padding: logical $btn-padding-y $btn-padding-x ( $btn-padding-y + .1rem );
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	&-sm {
+		min-width: auto;
+		// Offset padding to center font line height (Open sans)
+		padding: logical $btn-padding-y-sm $btn-padding-x-sm ( $btn-padding-y-sm + .1rem );
+	}
+
+	&-xs {
+		min-width: auto;
+		padding: logical $btn-padding-y-xs $btn-padding-x-xs;
+	}
+
+	&-primary {
+		@include button-hover-state($btn-primary-hover-bg-color, $btn-primary-hover-border-color, $btn-primary-hover-color);
+		@include button-active-focus-state($btn-primary-focus-bg-color, $btn-primary-focus-border-color, $btn-primary-focus-color, $btn-primary-focus-box-shadow);
+	}
+
+
+	&-secondary {
+		@include button-hover-state($btn-secondary-hover-bg-color, $btn-secondary-hover-border-color, $btn-secondary-hover-color);
+		@include button-active-focus-state($btn-secondary-focus-bg-color, $btn-secondary-focus-border-color, $btn-secondary-focus-color, $btn-secondary-focus-box-shadow);
+	}
+
+	&-danger {
+		@include button-hover-state($btn-danger-hover-bg-color, $btn-danger-hover-border-color, $btn-danger-hover-color);
+		@include button-active-focus-state($btn-danger-focus-bg-color, $btn-danger-focus-border-color, $btn-danger-focus-color, $btn-danger-focus-box-shadow);
+	}
+
+	&-blank {
+		background-color: transparent;
+		border: none;
+		@include button-hover-state($btn-blank-hover-bg-color, $btn-blank-hover-border-color, $btn-blank-hover-color);
+		@include button-active-focus-state(transparent, transparent, $btn-blank-focus-color, none);
+
+		&.btn.disabled,
+		&.btn:disabled {
+			background-color: transparent;
+		}
+	}
+
+	&-outline-primary {
+		@include button-hover-state($btn-outline-primary-hover-bg-color, $btn-outline-primary-hover-border-color, $btn-outline-primary-hover-color);
+		@include button-active-focus-state($btn-outline-primary-focus-bg-color, $btn-outline-primary-focus-border-color, $btn-outline-primary-focus-color, $btn-outline-primary-focus-box-shadow);
+	}
+
+	&-outline-secondary {
+		border-color: $theme-gray-600;
+		color: $theme-gray-600;
+
+		@include button-hover-state($btn-outline-secondary-hover-bg-color, $btn-outline-secondary-hover-border-color, $btn-outline-secondary-hover-color);
+		@include button-active-focus-state($btn-outline-secondary-focus-bg-color, $btn-outline-secondary-focus-border-color, $btn-outline-secondary-focus-color, $btn-outline-secondary-focus-box-shadow);
+	}
+
+	&-outline-danger {
+		@include button-hover-state($btn-outline-danger-hover-bg-color, $btn-outline-danger-hover-border-color, $btn-outline-danger-hover-color);
+		@include button-active-focus-state($btn-outline-danger-focus-bg-color, $btn-outline-danger-focus-border-color, $btn-outline-danger-focus-color, $btn-outline-danger-focus-box-shadow);
+	}
+
+	&.disabled,
+	&:disabled {
+		color: $btn-disabled-color;
+		background-color: $btn-disabled-bg-color;
+		border-color: $btn-disabled-border-color;
+		cursor: not-allowed;
+
+		[class^='icon'],
+		[class*='icon'] {
+			// stylelint-disable-next-line
+			color: $disabled-color !important;
+			opacity: $disabled-opacity;
+		}
+	}
+
+	[class^='icon'],
+	[class*='icon'] {
+		padding-inline-end: ( $spacer * .25 );
+		// Color has to be important to override default color of icon
+		// stylelint-disable-next-line
+		color: inherit !important;
+
+		&::before {
+			// disable text decoration on icon
+			display: inline-block;
+		}
+	}
+
+	&--icon {
+		min-width: auto;
+		padding: logical $btn-padding-y;
+		border-radius: 50%;
+
+		[class^='icon'],
+		[class*='icon'] {
+			padding-inline-end: 0;
+		}
+	}
+}
+
+// Little hack to switch arrows in RTL
+[dir='rtl'] {
+	.icon--type-next,
+	.icon--type-back {
+		transform: rotate(180deg);
+		padding-left: 0;
+		padding-right: ( $spacer * .25 );
+	}
+}

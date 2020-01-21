@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioControl /> shallow 1`] = `
+<FormControl
+  component="input"
+  name="radioControlField"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  type="radio"
+/>
+`;

@@ -1,0 +1,14 @@
+@import '../../scss/core';
+
+/*
+ -  Form control
+ -  (<input class="form-control" type="textarea" />)
+ */
+
+
+textarea {
+	&.is-invalid {
+		padding-inline-end: $input-padding-x;
+		background: none;
+	}
+}

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> shallow 1`] = `
+<PortalWithBackdrop>
+  <div
+    className="modal"
+    onClick={[Function]}
+  >
+    <ForwardRef
+      className="modal__close"
+      kind="blank"
+    >
+      <Icon
+        type="cancel"
+      />
+    </ForwardRef>
+    <div
+      className="modal__title"
+    >
+      Modal title
+    </div>
+    <div
+      className="modal__content"
+    >
+      <div>
+        Some content
+      </div>
+    </div>
+  </div>
+</PortalWithBackdrop>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Backdrop /> shallow 1`] = `
+<forwardRef(Box)
+  className="backdrop"
+  px={
+    Array [
+      0,
+      2,
+    ]
+  }
+  py={
+    Array [
+      0,
+      1,
+    ]
+  }
+>
+  <div />
+</forwardRef(Box)>
+`;
