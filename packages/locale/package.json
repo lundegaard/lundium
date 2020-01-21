@@ -1,0 +1,14 @@
+{
+	"name": "@lundium/locale",
+	"version": "0.0.1",
+	"license": "UNLICENSED",
+	"description": "Locales for lundium component library",
+	"main": "./dist",
+	"sideEffects": false,
+	"scripts": {
+		"build": "webpack"
+	},
+	"devDependencies": {
+		"glob": "^7.1.6"
+	}
+}
