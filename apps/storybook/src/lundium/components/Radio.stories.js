@@ -1,9 +1,12 @@
 import React from 'react';
-import { Radio } from 'lundium';
+import { Box, Radio } from 'lundium';
 import { noop } from 'ramda-extension';
 
-export default { title: 'Radio' };
+export default { title: 'Radio', component: Radio };
 
 export const basic = () => (
-	<Radio checked label="Generic Radio" onChange={noop} name="generic-radio" />
+	<Box>
+		<Radio label="Generic Radio unchecked" onChange={noop} name="generic-radio" />
+		<Radio checked label="Generic Radio" onChange={noop} name="generic-radio-2" />
+	</Box>
 );

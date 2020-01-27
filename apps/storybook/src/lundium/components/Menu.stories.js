@@ -1,6 +1,10 @@
 import React from 'react';
-import { Menu } from 'lundium';
+import { Menu, MenuItem } from 'lundium';
 
-export default { title: 'Menu' };
+export default { title: 'Menu', component: Menu, subcomponents: { MenuItem } };
 
-export const basic = () => <Menu />;
+export const basic = () => (
+	<Menu>
+		<MenuItem>First item</MenuItem>
+	</Menu>
+);

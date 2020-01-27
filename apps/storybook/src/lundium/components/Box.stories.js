@@ -1,26 +1,19 @@
 import React from 'react';
 import { Box } from 'lundium';
 
-export default { title: 'Box' };
+export default { title: 'Box', component: Box };
+
+const styleObject = {
+	height: 100,
+	width: 200,
+	border: '1px solid black',
+	backgroundColor: 'gray',
+};
 
 const BasicShowcase = props => (
 	<div>
-		<Box
-			style={{
-				height: 100,
-				border: '1px solid black',
-				backgroundColor: 'gray',
-			}}
-			{...props}
-		/>
-		<Box
-			style={{
-				height: 100,
-				border: '1px solid black',
-				backgroundColor: 'gray',
-			}}
-			{...props}
-		/>
+		<Box style={styleObject} {...props} />
+		<Box style={styleObject} {...props} />
 	</div>
 );
 

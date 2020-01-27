@@ -273,15 +273,6 @@
 	}
 }
 
-.password-strength {
-	padding-block-start: ( $spacer * .5 );
-
-	// Media queries
-	@include media-breakpoint-up(md) {
-		padding-block-start: calc((#{$input-padding-y * 2} + #{$input-height-border * 2} - #{$input-button-size / 2}) / 2 + #{$control-label-floating-font-size * $line-height-base + $floating-label-offset});
-	}
-}
-
 .form-group__button {
 	padding-block-start: calc((#{$input-padding-y * 2} + #{$input-height-border * 2} - #{$input-button-size / 2}) / 2 + #{$control-label-floating-font-size * $line-height-base + $floating-label-offset});
 }

@@ -1,1 +1,1 @@
-export { default } from './FormField';
+export { default, FormField as FormFieldPlain } from './FormField';
