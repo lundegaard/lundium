@@ -1,10 +1,11 @@
 import React, { Fragment, useState } from 'react';
 import { Button, Modal } from 'lundium';
 
-export default { title: 'Modal' };
+export default { title: 'Modal', component: Modal };
 
 const ModalComponent = () => {
 	const [isVisible, setIsVisible] = useState(false);
+
 	return (
 		<Fragment>
 			<Button kind="primary" onClick={() => setIsVisible(true)}>

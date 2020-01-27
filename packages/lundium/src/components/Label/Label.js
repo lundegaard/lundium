@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'ramda-extension';
 
-// import { useTheme } from '../ThemeProvider';
+import { useTheme } from '../ThemeProvider';
 
 const Label = ({ children, className, isHidden, disabled, readOnly, ...rest }) => {
-	// const theme = useTheme();
-	const theme = {};
+	const theme = useTheme();
 
 	return (
 		<label

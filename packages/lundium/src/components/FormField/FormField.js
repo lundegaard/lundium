@@ -6,7 +6,7 @@ import Label from '../Label';
 import FormGroup from '../FormGroup';
 import FormText from '../FormText';
 import Box from '../Box';
-import withGeneratedID from '../../utils/withGeneratedID';
+import useGeneratedID from '../../utils/useGeneratedID';
 
 const FormField = forwardRef(
 	(
@@ -15,7 +15,6 @@ const FormField = forwardRef(
 			beforeControl,
 			control: ControlComponent,
 			error,
-			generatedID,
 			groupProps,
 			hasFloatingLabel,
 			kind,
@@ -36,6 +35,8 @@ const FormField = forwardRef(
 		},
 		ref
 	) => {
+		const generatedID = useGeneratedID();
+
 		const uniqueID = id || `${name}-${generatedID}`;
 		const formTextChildren = error || warning;
 		const helpID = `${uniqueID}-help`;
@@ -141,9 +142,4 @@ FormField.propTypes = {
 	warning: PropTypes.node,
 };
 
-export { FormField };
-
-export default withGeneratedID(FormField);
-// export default FormField;
-// const test = () => <div>asdf</div>;
-// export default test;
+export default FormField;

@@ -1,15 +1,18 @@
 import React, { createRef, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { cx, isNotNil, noop } from 'ramda-extension';
+import { cx, flipIncludes, isNotNil, noop } from 'ramda-extension';
 import invariant from 'invariant';
 
 import FormGroupContext from '../../contexts/FormGroupContext';
 import isFilled from '../../utils/isFilled';
-import isNotFilled from '../../utils/isNotFilled';
+
+const isTypeCheckable = flipIncludes(['radio', 'checkbox']);
 
 const FormControl = ({
 	component: Component,
 	inputRef = createRef(),
+	onBlur = noop,
+	onFocus = noop,
 	checked,
 	children,
 	className,
@@ -19,33 +22,34 @@ const FormControl = ({
 	value,
 	...rest
 }) => {
-	const { onFilled, onEmpty, hasError, hasFloatingLabel, onFocus, onBlur } = useContext(
-		FormGroupContext
-	);
+	const {
+		onFilled,
+		onEmpty,
+		hasError,
+		hasFloatingLabel,
+		onFocus: onFocusContext,
+		onBlur: onBlurContext,
+	} = useContext(FormGroupContext);
 
 	useEffect(() => {
 		if (isFilled(value)) {
 			onFilled();
-		}
-	}, [value, onFilled]);
-
-	useEffect(() => {
-		if (isNotFilled(value)) {
+		} else {
 			onEmpty();
 		}
-	}, [value, onEmpty]);
+	}, [onEmpty, onFilled, value]);
 
 	const handleFocus = e => {
-		onFocus();
-		return rest.onFocus(e);
+		onFocusContext();
+		return onFocus(e);
 	};
 
 	const handleBlur = e => {
-		onBlur();
-		return rest.onBlur(e);
+		onBlurContext();
+		return onBlur(e);
 	};
 
-	const isCheckable = ['radio', 'checkbox'].includes(type) || isNotNil(checked);
+	const isCheckable = isTypeCheckable || isNotNil(checked);
 
 	invariant(
 		isCheckable || !hasFloatingLabel || value !== undefined,
@@ -95,11 +99,6 @@ FormControl.propTypes = {
 	type: PropTypes.string,
 	/** Value of the form control. */
 	value: PropTypes.any,
-};
-
-FormControl.defaultProps = {
-	onBlur: noop,
-	onFocus: noop,
 };
 
 export default FormControl;

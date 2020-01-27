@@ -1,15 +1,14 @@
 import React from 'react';
-import { select, withKnobs } from '@storybook/addon-knobs';
+import { select } from '@storybook/addon-knobs';
 import { Box, Icon } from 'lundium';
 import { theme } from '@lundium/theme-basic';
 
 const styles = {
-	root: { textAlign: 'center' },
+	root: { textAlign: 'center', component: Icon },
 };
 
-export default { title: 'Icon', decorators: [withKnobs] };
+export default { title: 'Icon' };
 
-// TODO Add basic theme and import set of icons
 export const basic = () => (
 	<div style={styles.root}>
 		{theme.iconTypes.map(type => (

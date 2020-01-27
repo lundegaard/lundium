@@ -1,7 +1,7 @@
 import React from 'react';
 import { Spinner } from 'lundium';
 
-export default { title: 'Spinner' };
+export default { title: 'Spinner', component: Spinner };
 
 export const basic = () => <Spinner>Loading data</Spinner>;
 

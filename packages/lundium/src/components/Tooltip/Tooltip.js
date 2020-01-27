@@ -72,7 +72,7 @@ export const TooltipPlacements = {
 	left: 'left',
 };
 
-export const Triggers = ['hover', 'click', 'right-click'];
+export const TooltipTriggers = ['hover', 'click', 'right-click'];
 
 Tooltip.propTypes = {
 	/** Children to be rendered in the main container. */
@@ -90,7 +90,7 @@ Tooltip.propTypes = {
 	/** Content of tooltip */
 	tooltip: PropTypes.node,
 	/** Tooltip trigger - hover, click or right-click */
-	trigger: PropTypes.oneOf(Triggers),
+	trigger: PropTypes.oneOf(TooltipTriggers),
 };
 
 export default Tooltip;

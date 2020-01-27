@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Toggle } from 'lundium';
 
-export default { title: 'Toggle' };
+export default { title: 'Toggle', component: Toggle };
 
 const StatefulToggle = () => {
 	const [checked, setChecked] = useState(true);

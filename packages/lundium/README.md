@@ -19,18 +19,8 @@ import { Box, Grid } from 'lundium';
 </Box>
 ```
 
-## Available components
+## Documentation
 
-- Box
-- Grid
-- Heading
-- Icon
-- InlineText
-- Link
-- Text
+For complete set of usable components, please refer to our storybook app.
 
-## Theming
-
-Basic components contain a set of classnames that can be customized and styled.
-
-For default theme please refer to @lundium/theme-default
+<!-- TODO add link to storybook -->

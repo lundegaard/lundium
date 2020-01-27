@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid } from 'lundium';
-import { boolean, withKnobs } from '@storybook/addon-knobs';
+import { boolean } from '@storybook/addon-knobs';
 
-export default { title: 'Grid', decorators: [withKnobs] };
+export default { title: 'Grid', component: Grid };
 
 const border = {
 	border: '1px solid gray',
