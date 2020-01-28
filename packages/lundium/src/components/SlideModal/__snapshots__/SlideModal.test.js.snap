@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SlideModal /> matches snapshot when shallowly rendered 1`] = `
+<PortalWithBackdrop
+  onBackdropClick={[Function]}
+>
+  <forwardRef(Box)
+    className="slide-modal slide-modal--sm"
+    onClick={[Function]}
+  >
+    <forwardRef(Grid)
+      alignItems="center"
+      className="slide-modal__controls"
+      justifyContent="end"
+    >
+      <ForwardRef
+        kind="blank"
+        onClick={[Function]}
+        size="xs"
+      >
+        <Icon
+          size={18}
+          type="cancel"
+        />
+      </ForwardRef>
+    </forwardRef(Grid)>
+    <div>
+      Some child
+    </div>
+  </forwardRef(Box)>
+</PortalWithBackdrop>
+`;

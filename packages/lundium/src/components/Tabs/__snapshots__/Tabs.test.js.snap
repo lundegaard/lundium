@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> matches snapshot when shallowly rendered 1`] = `
+<forwardRef(Box)
+  className="tabs"
+>
+  <TabBar>
+    <Tab
+      isActive={true}
+      key=".0"
+      label="First"
+      onClick={[Function]}
+    />
+    <Tab
+      isActive={false}
+      key=".1"
+      label="Second"
+      onClick={[Function]}
+    />
+  </TabBar>
+  <forwardRef(Text)>
+    First content
+  </forwardRef(Text)>
+</forwardRef(Box)>
+`;

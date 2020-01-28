@@ -22,7 +22,7 @@ const sortStories = sortOrder => {
 
 		// Sort stories in a group.
 		if (aGroup === bGroup) {
-			const group = sortOrder[aGroup];
+			const group = sortOrder[aGroup] || [aGroup];
 
 			return getSortPosition(aComponent, group) - getSortPosition(bComponent, group);
 		}

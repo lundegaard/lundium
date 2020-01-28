@@ -10,7 +10,8 @@
 		"ramda": "^0.26.1",
 		"ramda-extension": "^0.10.1",
 		"react-helmet": "^5.2.1",
-		"react-popper-tooltip": "^2.10.1"
+		"react-popper-tooltip": "^2.10.1",
+		"react-transition-group": "^4.3.0"
 	},
 	"devDependencies": {
 		"enzyme": "^3.11.0"

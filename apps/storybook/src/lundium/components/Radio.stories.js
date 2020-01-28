@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Radio } from 'lundium';
 import { noop } from 'ramda-extension';
 
-export default { title: 'Radio', component: Radio };
+export default { title: 'Form/Radio', component: Radio };
 
 export const basic = () => (
 	<Box>

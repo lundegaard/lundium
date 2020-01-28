@@ -8,10 +8,10 @@
 /*   1. CONFIG,BASE,VENDORS   */
 /* -------------------------- */
 
-@import '01_config/functions';                                           // Functions
-@import '01_config/variables';                                           // Variables
-@import '01_vendors/bootstrap_init';                                     // Bootstrap 4.1.0 (http://getbootstrap.com)
-@import '~bootstrap/scss/reboot';                                        // Bootstrap Reboot
+@import '01_config/functions';										// Functions
+@import '01_config/variables';                    // Variables
+@import '01_vendors/bootstrap_init';              // Bootstrap 4.1.0 (http://getbootstrap.com)
+@import '~bootstrap/scss/reboot';                 // Bootstrap Reboot
 
 
 // Import utilities separately, spacing and others needs to be custom to support [dir="rtl"] and logical properties
@@ -27,11 +27,11 @@
 @import '~bootstrap/scss/utilities/visibility';
 // @import '~bootstrap/scss/utilities/shadows';
 
-@import '01_config/mixins';                                              // Mixins
-@import '01_base/html';                                                  // HTML and Body styles
-@import '01_base/master';                                                // Master styles
-@import '01_base/typography';                                            // Typography
-@import '01_base/utilities';                                             // Custom utilities
+@import '01_config/mixins';                       // Mixins
+@import '01_base/html';                           // HTML and Body styles
+@import '01_base/master';                         // Master styles
+@import '01_base/typography';                     // Typography
+@import '01_base/utilities';                      // Custom utilities
 
 // Import components stylesheets
 // @import './components/Icon.scss';
@@ -46,9 +46,17 @@
 @import './components/Label.scss';
 @import './components/Menu.scss';
 @import './components/MenuItem.scss';
-@import './components/Modal.scss';
+@import './components/Notification.scss';
+@import './components/NotificationBox.scss';
+@import './components/NotificationStack.scss';
 @import './components/Radio.scss';
+@import './components/SlideModal.scss';
+@import './components/SlideModal.scss';
 @import './components/Spinner.scss';
+@import './components/StaticModal.scss';
+@import './components/StaticModal.scss';
 @import './components/Textarea.scss';
 @import './components/Toggle.scss';
 @import './components/Tooltip.scss';
+@import './components/Tab.scss';
+@import './components/TabBar.scss';

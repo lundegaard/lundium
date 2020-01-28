@@ -21,6 +21,4 @@ import { Box, Grid } from 'lundium';
 
 ## Documentation
 
-For complete set of usable components, please refer to our storybook app.
-
-<!-- TODO add link to storybook -->
+All available components with usage examples can be found in our [Storybook docs](https://compassionate-carson-ce6ff5.netlify.com/?path=/story/introduction-welcome--page)

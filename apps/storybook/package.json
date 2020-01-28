@@ -9,8 +9,8 @@
 		"build": "build-storybook -o ../../build/storybook"
 	},
 	"dependencies": {
-		"@lundium/theme-basic": "^0.0.1",
 		"@lundium/locale": "^0.0.1",
+		"@lundium/theme-basic": "^0.0.1",
 		"lundium": "^0.0.1",
 		"ramda": "^0.26.1",
 		"ramda-extension": "^0.10.1",

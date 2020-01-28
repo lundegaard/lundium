@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormField } from 'lundium';
 
-export default { title: 'FormField', component: FormField };
+export default { title: 'Form/FormField', component: FormField };
 
 const DummyInputText = () => <input type="text" />;
 const DummyIcon = () => <i className="icon" />;

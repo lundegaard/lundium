@@ -17,6 +17,7 @@ ThemeProvider.propTypes = {
 	children: PropTypes.node,
 	theme: PropTypes.shape({
 		isRTL: PropTypes.bool,
+		locale: PropTypes.object,
 	}),
 };
 

@@ -39,7 +39,7 @@ Text.displayName = 'forwardRef(Text)';
 Text.propTypes = {
 	align: PropTypes.oneOfType([
 		PropTypes.object,
-		PropTypes.array,
+		PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])),
 		PropTypes.oneOf(['left', 'center', 'right']),
 	]),
 	/** Tag used for root component */

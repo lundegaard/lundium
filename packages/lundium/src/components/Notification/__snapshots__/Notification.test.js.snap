@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification /> matches snapshot when shallowly rendered 1`] = `
+<forwardRef(Grid)
+  className="notification success"
+  flex={true}
+>
+  <forwardRef(Box)
+    className="notification__icon"
+    mx={3}
+  >
+    <Icon
+      color="success"
+      size={22}
+      type="success"
+    />
+  </forwardRef(Box)>
+  <forwardRef(Box)
+    className="notification__text"
+  />
+  <forwardRef(Box)
+    mx={3}
+  >
+    <ForwardRef
+      className="py-0"
+      kind="blank"
+      onClick={[Function]}
+      size="xs"
+    >
+      <Icon
+        size={16}
+        type="cancel"
+      />
+    </ForwardRef>
+  </forwardRef(Box)>
+</forwardRef(Grid)>
+`;

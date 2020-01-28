@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationBox /> matches snapshot when shallowly rendered 1`] = `
+<Card
+  borderRadius={true}
+  boxShadow={
+    Array [
+      "none",
+      "sm",
+    ]
+  }
+  className="notification-box notification-box--kind-info"
+  px={
+    Object {
+      "md": 4,
+      "xs": 3,
+    }
+  }
+  py={
+    Object {
+      "md": 3,
+      "xs": 2,
+    }
+  }
+>
+  <forwardRef(Grid)
+    flex={true}
+  >
+    <Icon
+      color="blue"
+      mr={3}
+      size="18"
+      type="info"
+    />
+    <forwardRef(Text)
+      mb={0}
+    />
+  </forwardRef(Grid)>
+</Card>
+`;
