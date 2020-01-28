@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { BUTTON_TYPES, Button } from 'lundium';
 
-export default { title: 'Button', component: Button };
+export default { title: 'Form/Button', component: Button };
 
 export const withClickListener = () => (
 	<Button onClick={action('click')} disabled={boolean('disabled', false)}>

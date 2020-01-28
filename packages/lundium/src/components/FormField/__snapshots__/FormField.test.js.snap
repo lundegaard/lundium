@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FormField /> shallow 1`] = `
-<forwardRef(FormField)
-  control={[Function]}
-  generatedID="0"
-  name="testFormField"
-/>
+<FormGroup
+  className=""
+  hasError={false}
+  hasLabel={false}
+  hasWarning={false}
+>
+  <DummyInputText
+    id="testFormField-0"
+    name="testFormField"
+  />
+</FormGroup>
 `;

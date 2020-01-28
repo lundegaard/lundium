@@ -5,8 +5,6 @@ exports[`<TextareaControl /> shallow 1`] = `
   className=""
   component="textarea"
   name="textarea-control"
-  onBlur={[Function]}
-  onFocus={[Function]}
   type="text"
 />
 `;

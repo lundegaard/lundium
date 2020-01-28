@@ -4,6 +4,8 @@ const cs_CZ = {
 	loadingText: 'Načítání…',
 	noOptionsText: 'Žádné možnosti',
 	openText: 'Otevřít',
+	modalsConfirm: 'Potvrdit',
+	modalsCancel: 'Zrušit',
 };
 
 export default cs_CZ;

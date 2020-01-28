@@ -10,10 +10,10 @@ const styleObject = {
 	backgroundColor: 'gray',
 };
 
-const BasicShowcase = props => (
+const BasicShowcase = () => (
 	<div>
-		<Box style={styleObject} {...props} />
-		<Box style={styleObject} {...props} />
+		<Box style={styleObject} />
+		<Box style={styleObject} />
 	</div>
 );
 

@@ -15,7 +15,6 @@ $theme-blue:                    #0d6bfe;
 $theme-teal:                    #0c9cb2;
 $theme-red:                     #c40f11;
 $theme-red-light:               #ef0000;
-$theme-gray-50:                 #fbfbfb;
 $theme-gray-100:                #f4f4f4; // $theme-gray-300er
 $theme-gray-200:                #ebebeb; // $theme-gray-bg
 $theme-gray-250:                #e6e6e6; // $theme-gray-medium
@@ -112,6 +111,7 @@ $disabled-color:                    $body-color;
 $border-radius:                     5px;
 $btn-border-radius-sm:              $border-radius;
 
+$box-shadow-header-btn:             inset 0 0 0 2px rgba($primary, .25);
 $box-shadow-primary:                0 0 15px 0 rgba($primary, .3);
 $box-shadow-secondary:              0 0 15px 0 rgba($secondary, .3);
 $box-shadow-danger:                 0 0 15px 0 rgba($danger, .3);
@@ -129,7 +129,7 @@ $input-btn-line-height:             1.435;
 $input-button-size:                 2.2rem;
 
 $btn-padding-y:                     .9rem;
-$btn-padding-x:                     ( $spacer * 2 );
+$btn-padding-x:                     ( $spacer * 1.25 );
 $btn-padding-y-sm:                  .2rem;
 $btn-padding-x-sm:                  $spacer;
 $btn-padding-y-xs:                  ( $spacer * .25 );
@@ -148,6 +148,7 @@ $btn-disabled-bg-color:             $theme-gray-400;
 $btn-disabled-border-color:         $theme-gray-400;
 
 $btn-box-shadow:                    0 0 0 $primary;
+$btn-focus-box-shadow:              $box-shadow-header-btn;
 $btn-transition:                    color $transition-speed $transition-easing, background-color $transition-speed $transition-easing, box-shadow $transition-speed $transition-easing, border-color $transition-speed $transition-easing;
 
 $btn-primary-hover-bg-color:        darken($primary, 10%);
@@ -279,11 +280,12 @@ $custom-select-indicator-padding:                1.5rem;
 $custom-select-disabled-bg:                      transparent;
 $custom-select-disabled-color:                   $theme-gray-400;
 
-$custom-checkbox-indicator-icon-checked:         str-replace( url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 427 427'><path fill='#{$custom-control-indicator-checked-color}' d='M366.933,42.667l-217.6,219.733l-89.6,-89.6l-59.733,59.733l149.333,151.467l277.334,-279.467l-59.734,-61.866Z' /></svg>"), '#', '%23' );
-$custom-radio-indicator-icon-checked:            str-replace( url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>"), '#', '%23' );
-$custom-radio-indicator-icon-checked-disabled:   str-replace( url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-select-indicator-disabled-color}'/></svg>"), '#', '%23' );
-$custom-select-indicator:                        str-replace( url("data:image/svg+xml,<svg viewBox='0 0 8 7' version='1.1' xmlns='http://www.w3.org/2000/svg'><path d='M7.57,0.005c0.022,0.005 0.046,0.008 0.068,0.014c0.179,0.052 0.322,0.208 0.355,0.396c0.016,0.092 0.005,0.188 -0.03,0.274c-0.009,0.022 -0.021,0.042 -0.031,0.063l-3.501,6.002c-0.013,0.019 -0.025,0.039 -0.039,0.057c-0.129,0.164 -0.365,0.233 -0.563,0.161c-0.088,-0.032 -0.165,-0.088 -0.223,-0.161c-0.014,-0.018 -0.026,-0.038 -0.039,-0.057l-3.501,-6.002c-0.01,-0.021 -0.022,-0.041 -0.031,-0.063c-0.079,-0.193 -0.022,-0.434 0.141,-0.572c0.072,-0.06 0.16,-0.099 0.252,-0.112c0.024,-0.003 0.047,-0.003 0.07,-0.005l7.002,0c0.023,0.002 0.046,0.003 0.07,0.005Z' style='fill:#{$custom-select-indicator-color};'/></svg>"), '#', '%23' );
-$custom-select-disabled-indicator:               str-replace( url("data:image/svg+xml,<svg viewBox='0 0 8 7' version='1.1' xmlns='http://www.w3.org/2000/svg'><path d='M7.57,0.005c0.022,0.005 0.046,0.008 0.068,0.014c0.179,0.052 0.322,0.208 0.355,0.396c0.016,0.092 0.005,0.188 -0.03,0.274c-0.009,0.022 -0.021,0.042 -0.031,0.063l-3.501,6.002c-0.013,0.019 -0.025,0.039 -0.039,0.057c-0.129,0.164 -0.365,0.233 -0.563,0.161c-0.088,-0.032 -0.165,-0.088 -0.223,-0.161c-0.014,-0.018 -0.026,-0.038 -0.039,-0.057l-3.501,-6.002c-0.01,-0.021 -0.022,-0.041 -0.031,-0.063c-0.079,-0.193 -0.022,-0.434 0.141,-0.572c0.072,-0.06 0.16,-0.099 0.252,-0.112c0.024,-0.003 0.047,-0.003 0.07,-0.005l7.002,0c0.023,0.002 0.046,0.003 0.07,0.005Z' style='fill:#{$custom-select-indicator-disabled-color};'/></svg>"), '#', '%23' );
+$custom-checkbox-indicator-icon-checked:         str-replace( url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20427%20427%27%3E%3Cpath%20fill%3D%27%232d2d2d%27%20d%3D%27M366.933%2C42.667l-217.6%2C219.733l-89.6%2C-89.6l-59.733%2C59.733l149.333%2C151.467l277.334%2C-279.467l-59.734%2C-61.866Z%27%20%2F%3E%3C%2Fsvg%3E'), '#', '%23' );
+$custom-checkbox-indicator-icon-checked-disabled:str-replace( url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20427%20427%27%3E%3Cpath%20fill%3D%27%23bbb%27%20d%3D%27M366.933%2C42.667l-217.6%2C219.733l-89.6%2C-89.6l-59.733%2C59.733l149.333%2C151.467l277.334%2C-279.467l-59.734%2C-61.866Z%27%20%2F%3E%3C%2Fsvg%3E'), '#', '%23' );
+$custom-radio-indicator-icon-checked:            str-replace( url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%27-4%20-4%208%208%27%3E%3Ccircle%20r%3D%273%27%20fill%3D%27%232d2d2d%27%2F%3E%3C%2Fsvg%3E'), '#', '%23' );
+$custom-radio-indicator-icon-checked-disabled:   str-replace( url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%27-4%20-4%208%208%27%3E%3Ccircle%20r%3D%273%27%20fill%3D%27%23bbb%27%2F%3E%3C%2Fsvg%3E'), '#', '%23' );
+$custom-select-indicator:                        str-replace( url('data:image/svg+xml,%3Csvg%20viewBox%3D%270%200%208%207%27%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M7.57%2C0.005c0.022%2C0.005%200.046%2C0.008%200.068%2C0.014c0.179%2C0.052%200.322%2C0.208%200.355%2C0.396c0.016%2C0.092%200.005%2C0.188%20-0.03%2C0.274c-0.009%2C0.022%20-0.021%2C0.042%20-0.031%2C0.063l-3.501%2C6.002c-0.013%2C0.019%20-0.025%2C0.039%20-0.039%2C0.057c-0.129%2C0.164%20-0.365%2C0.233%20-0.563%2C0.161c-0.088%2C-0.032%20-0.165%2C-0.088%20-0.223%2C-0.161c-0.014%2C-0.018%20-0.026%2C-0.038%20-0.039%2C-0.057l-3.501%2C-6.002c-0.01%2C-0.021%20-0.022%2C-0.041%20-0.031%2C-0.063c-0.079%2C-0.193%20-0.022%2C-0.434%200.141%2C-0.572c0.072%2C-0.06%200.16%2C-0.099%200.252%2C-0.112c0.024%2C-0.003%200.047%2C-0.003%200.07%2C-0.005l7.002%2C0c0.023%2C0.002%200.046%2C0.003%200.07%2C0.005Z%27%20style%3D%27fill%3A%23333%3B%27%2F%3E%3C%2Fsvg%3E'), '#', '%23' );
+$custom-select-disabled-indicator:               str-replace( url('data:image/svg+xml,%3Csvg%20viewBox%3D%270%200%208%207%27%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M7.57%2C0.005c0.022%2C0.005%200.046%2C0.008%200.068%2C0.014c0.179%2C0.052%200.322%2C0.208%200.355%2C0.396c0.016%2C0.092%200.005%2C0.188%20-0.03%2C0.274c-0.009%2C0.022%20-0.021%2C0.042%20-0.031%2C0.063l-3.501%2C6.002c-0.013%2C0.019%20-0.025%2C0.039%20-0.039%2C0.057c-0.129%2C0.164%20-0.365%2C0.233%20-0.563%2C0.161c-0.088%2C-0.032%20-0.165%2C-0.088%20-0.223%2C-0.161c-0.014%2C-0.018%20-0.026%2C-0.038%20-0.039%2C-0.057l-3.501%2C-6.002c-0.01%2C-0.021%20-0.022%2C-0.041%20-0.031%2C-0.063c-0.079%2C-0.193%20-0.022%2C-0.434%200.141%2C-0.572c0.072%2C-0.06%200.16%2C-0.099%200.252%2C-0.112c0.024%2C-0.003%200.047%2C-0.003%200.07%2C-0.005l7.002%2C0c0.023%2C0.002%200.046%2C0.003%200.07%2C0.005Z%27%20style%3D%27fill%3A%23bbb%3B%27%2F%3E%3C%2Fsvg%3E'), '#', '%23' );
 
 $custom-select-background:                       $custom-select-indicator no-repeat right $custom-select-indicator-padding center / $custom-select-bg-size;
 
@@ -343,22 +345,24 @@ $breadcrumb-color:                  $body-color;
 $breadcrumb-padding-x:              0;
 $breadcrumb-padding-y:              0;
 $breadcrumb-margin-bottom:          ( $spacer * .25 );
+$breadcrumb-font-size:              1.2rem;
 
 $headings-font-weight:              800;
 
-$h1-font-size-mobile:               3rem;
-$h1-font-size:                      4.2rem;
+$h1-font-size:                      3.6rem;
 $h1-line-height-mobile:             1.2;
-$h1-line-height:                    1.1;
+$h1-line-height:                    1.4;
+$h1-font-size-mobile:               3rem;
 $h1-margin-bottom:                  0;
 
-$h2-font-size-mobile:               2rem;
+$h2-font-size-mobile:               2.4rem;
 $h2-font-size:                      3.2rem;
 $h2-line-height-mobile:             1.35;
 $h2-line-height:                    1.2;
 $h2-margin-bottom:                  .8rem;
 
-$h3-font-size:                      1.8rem;
+$h3-font-size:                      1.6rem;
+$h3-font-weight:                    600;
 $h3-margin-bottom:                  $spacer;
 
 $footer-height:                     108px;
@@ -366,6 +370,7 @@ $footer-box-shadow:                 0 -20px 40px 0 rgba($theme-black, .04);
 
 $modal-width:                       580px;
 $modal-bg:                          $theme-bg;
+$modal-title-font-size-mobile:      2rem;
 $modal-title-font-size:             2.8rem;
 $modal-title-font-weight:           800;
 $modal-box-shadow:                  $box-shadow-basic;
@@ -428,8 +433,8 @@ $menu-max-height:                   300px;
 
 $toggle-icon-size:                  24px;
 $toggle-icon-offset:                2px;
-$toggle-height:                     28px;
-$toggle-width:                      90px;
+$toggle-height:                     29px;
+$toggle-width:                      96px;
 $toggle-true-bg:                    $theme-green;
 $toggle-false-bg:                   $theme-red;
 $toggle-color:                      $theme-white;
@@ -449,24 +454,30 @@ $tab-link-number-color:             $theme-gray-600;
 $tab-link-number-size:              30px;
 $tab-link-number-size-mobile:       24px;
 $tab-link-number-border:            1px solid $theme-gray-400;
-$tab-link-font-size:                1.8rem;
+$tab-link-font-size:                1.5rem;
 $tab-link-font-size-mobile:         1.6rem;
 $tab-link-number-font-size:         1.4rem;
 $tab-link-color:                    $body-color;
 $tab-link-hover-color:              $primary;
 $tab-link-done-bg-color:            $theme-gray-800;
 
+$stepper-link-font-size:            1.8rem;
+$stepper-link-font-size-mobile:     1.6rem;
+
 $card-bg:                           $theme-white;
 $card-padding-mobile-y:             $spacer;
 $card-padding-mobile-x:             $spacer;
-$card-padding-y:                    ( $spacer * 1.25 );
-$card-padding-x:                    ( $spacer * 1.25 );
+$card-padding-y:                    $grid-gutter-width;
+$card-padding-x:                    $grid-gutter-width;
 $card-icon-mobile-height:           50px;
 $card-icon-height:                  70px;
 $card-icon-width:                   120px;
 $card-title-size:                   1.6rem;
 $card-box-shadow:                   0 0 rgba($theme-white, 0);
 $card-hover-box-shadow:             $box-shadow-basic;
+
+$card-radio-padding-y:              ( $spacer * 1.25 );
+$card-radio-padding-x:              ( $spacer * 1.25 );
 
 $panel-bg:                          $theme-white;
 $panel-bg-inactive:                 $theme-gray-200;
@@ -484,6 +495,7 @@ $panel-icon-hover-color:            $primary;
 
 $gauge-size:                        120px;
 $gauge-size-mobile:                 75px;
+$gauge-height:                      66px;
 $gauge-steps:                       15;
 $gauge-bar-bg:                      #eee;
 $gauge-danger-gradient-start:       #c40f11;
@@ -544,17 +556,11 @@ $progress-circle-bar-color:             $primary;
 $progress-circle-bg-color:              $theme-gray-300;
 $progress-circle-size:                  45px;
 
-$info-tab-box-shadow:                 $box-shadow-basic;
-$info-tab-bg-color:                   $theme-white;
+$info-tab-box-shadow:                   $box-shadow-basic;
+$info-tab-bg-color:                     $theme-white;
 
-$sticky-nav-height-xs:                50px;
-$sticky-nav-height:                   70px;
-$sticky-nav-height-default:           88px;
-$sticky-nav-toggle-width:             24px;
-$sticky-nav-toggle-height:            22px;
-$sticky-nav-logo-height-mobile:       28px;
-
-$skeletor-bg-color:						$theme-gray-300;
+$spinner-size:                          48px;
+$spinner-border-width:                  4px;
 
 // Javascript export
 /* stylelint-disable */

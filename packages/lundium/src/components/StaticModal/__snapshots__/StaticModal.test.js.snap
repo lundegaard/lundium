@@ -1,31 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Modal /> shallow 1`] = `
-<PortalWithBackdrop>
-  <div
+exports[`<StaticModal /> matches snapshot when shallowly rendered 1`] = `
+<PortalWithBackdrop
+  onBackdropClick={[Function]}
+>
+  <forwardRef(Box)
     className="modal"
     onClick={[Function]}
+    title="Modal title"
   >
     <ForwardRef
       className="modal__close"
       kind="blank"
+      onClick={[Function]}
     >
       <Icon
         type="cancel"
       />
     </ForwardRef>
-    <div
-      className="modal__title"
-    >
-      Modal title
+    <div>
+      Some content
     </div>
-    <div
-      className="modal__content"
-    >
-      <div>
-        Some content
-      </div>
-    </div>
-  </div>
+  </forwardRef(Box)>
 </PortalWithBackdrop>
 `;

@@ -3,7 +3,7 @@
 # Lundium
 
 Lundium is a library of UI components used across Lundegaard projects .
-Goal of this library is to provide one base from which components could be shared and reused, thus offering one central point for further development and improvements
+Goal of this library is to provide one base from which components could be shared and reused, thus offering one central point for further development and improvements.
 
 ## Getting started
 
@@ -16,6 +16,10 @@ yarn add lundium
 ```bash
 npm install lundium
 ```
+
+## Documentation
+
+All available components with usage examples can be found in our [Storybook docs](https://compassionate-carson-ce6ff5.netlify.com/?path=/story/introduction-welcome--page)
 
 ## Theming
 
