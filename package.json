@@ -32,8 +32,8 @@
 		"storybook": "yarn workspace @lundium/storybook",
 		"theme-basic": "yarn workspace @lundium/theme-basic",
 		"locale": "yarn workspace @lundium/locale",
-		"analyze": "yarn create-stats && webpack-bundle-analyzer ./stats.json",
-		"create-stats": "webpack --profile --json > stats.json"
+		"analyze": "yarn create-stats && webpack-bundle-analyzer ./stats.json ./packages/lundium/dist",
+		"create-stats": "NODE_ENV=analyze webpack --profile --json > stats.json"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.3",
@@ -59,6 +59,7 @@
 		"prettier": "1.19.1",
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0",
+		"size-plugin": "^2.0.1",
 		"stylelint": "^13.0.0",
 		"stylelint-scss": "^3.13.0",
 		"webpack": "^4.41.5",

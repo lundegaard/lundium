@@ -1,6 +1,7 @@
 const path = require('path');
 
 const glob = require('glob');
+const SizePlugin = require('size-plugin');
 
 const packagePath = process.cwd();
 const lundiumPackagePath = './packages/lundium';
@@ -18,7 +19,8 @@ const entries = directoryPackages.reduce(
 );
 
 module.exports = {
-	mode: 'production',
+	mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
+	plugins: process.env.NODE_ENV === 'analyze' ? [] : [new SizePlugin()],
 	entry: {
 		index: `${lundiumPackagePath}/src/index.js`,
 		...entries,
@@ -39,4 +41,12 @@ module.exports = {
 	},
 	// In case of troubleshooting: https://github.com/lerna/lerna/issues/1049
 	externals: ['react', 'react-dom'],
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+			minSize: 0,
+			name: false,
+		},
+		sideEffects: true,
+	},
 };
