@@ -1,7 +1,7 @@
 {
 	"name": "lundium",
 	"version": "0.0.1",
-	"license": "UNLICENSED",
+	"license": "MIT",
 	"description": "Components",
 	"main": "./dist",
 	"sideEffects": false,

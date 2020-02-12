@@ -1,7 +1,7 @@
 {
 	"name": "@lundium/locale",
 	"version": "0.0.1",
-	"license": "UNLICENSED",
+	"license": "MIT",
 	"description": "Locales for lundium component library",
 	"main": "./dist",
 	"sideEffects": false,
