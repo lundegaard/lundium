@@ -21,6 +21,7 @@
 		"build:lundium-components": "webpack",
 		"build:lundium-theme-basic": "yarn theme-basic build",
 		"build:lundium-locale": "yarn locale build",
+		"prepublish": "yarn build",
 		"@other": "----- OTHER SCRIPTS -----",
 		"start": "yarn storybook start",
 		"generate": "plop --plopfile \"./.plop/plopfile.js\"",

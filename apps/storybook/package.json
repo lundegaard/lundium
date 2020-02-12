@@ -1,7 +1,7 @@
 {
 	"name": "@lundium/storybook",
 	"version": "0.0.1",
-	"license": "UNLICENSED",
+	"license": "MIT",
 	"description": "Storybook application for documentation of our UI components",
 	"main": "src/index.js",
 	"scripts": {
