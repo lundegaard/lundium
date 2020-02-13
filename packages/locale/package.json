@@ -1,6 +1,6 @@
 {
 	"name": "@lundium/locale",
-	"version": "0.0.1-alpha.1",
+	"version": "0.0.1-alpha.2",
 	"license": "MIT",
 	"description": "Locales for lundium component library",
 	"main": "./dist",
@@ -10,5 +10,6 @@
 	},
 	"devDependencies": {
 		"glob": "^7.1.6"
-	}
+	},
+	"gitHead": "02e71ba27ff813f91dbd8684d654fa2eaddf2946"
 }

@@ -1,6 +1,6 @@
 {
 	"name": "lundium",
-	"version": "0.0.1-alpha.1",
+	"version": "0.0.1-alpha.2",
 	"license": "MIT",
 	"description": "Components",
 	"main": "./dist",
@@ -20,5 +20,6 @@
 		"prop-types": "^15.7.2",
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0"
-	}
+	},
+	"gitHead": "02e71ba27ff813f91dbd8684d654fa2eaddf2946"
 }
