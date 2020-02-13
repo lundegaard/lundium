@@ -4,6 +4,9 @@
 	"license": "MIT",
 	"description": "Basic theme for lundium components",
 	"main": "./dist/theme.js",
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"build": "webpack"
 	},
@@ -31,5 +34,5 @@
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0"
 	},
-	"gitHead": "02e71ba27ff813f91dbd8684d654fa2eaddf2946"
+	"gitHead": "92812f32b28cd94957b4b8e0e8f81e085636310e"
 }

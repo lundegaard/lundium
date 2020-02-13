@@ -11,5 +11,8 @@
 	"devDependencies": {
 		"glob": "^7.1.6"
 	},
-	"gitHead": "02e71ba27ff813f91dbd8684d654fa2eaddf2946"
+	"publishConfig": {
+		"access": "public"
+	},
+	"gitHead": "92812f32b28cd94957b4b8e0e8f81e085636310e"
 }
