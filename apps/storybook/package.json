@@ -1,17 +1,18 @@
 {
 	"name": "@lundium/storybook",
-	"version": "0.0.1-alpha.0",
+	"version": "0.0.1-alpha.1",
 	"license": "MIT",
 	"description": "Storybook application for documentation of our UI components",
+	"private": true,
 	"main": "src/index.js",
 	"scripts": {
 		"start": "start-storybook -p 6006",
 		"build": "build-storybook -o ../../build/storybook"
 	},
 	"dependencies": {
-		"@lundium/locale": "^0.0.1-alpha.0",
-		"@lundium/theme-basic": "^0.0.1-alpha.0",
-		"lundium": "^0.0.1-alpha.0",
+		"@lundium/locale": "^0.0.1-alpha.1",
+		"@lundium/theme-basic": "^0.0.1-alpha.1",
+		"lundium": "^0.0.1-alpha.1",
 		"ramda": "^0.26.1",
 		"ramda-extension": "^0.10.1",
 		"react": "^16.12.0",

@@ -1,6 +1,6 @@
 {
 	"name": "@lundium/locale",
-	"version": "0.0.1-alpha.0",
+	"version": "0.0.1-alpha.1",
 	"license": "MIT",
 	"description": "Locales for lundium component library",
 	"main": "./dist",
