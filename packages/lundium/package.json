@@ -5,16 +5,25 @@
 	"description": "Components",
 	"main": "./dist",
 	"sideEffects": false,
+	"files": [
+		"dist/**"
+	],
+	"scripts": {
+		"build": "webpack"
+	},
 	"dependencies": {
+		"@babel/cli": "^7.8.4",
 		"invariant": "^2.2.4",
-		"ramda": "^0.26.1",
+		"ramda": "^0.27.0",
 		"ramda-extension": "^0.10.1",
 		"react-helmet": "^5.2.1",
 		"react-popper-tooltip": "^2.10.1",
 		"react-transition-group": "^4.3.0"
 	},
 	"devDependencies": {
-		"enzyme": "^3.11.0"
+		"enzyme": "^3.11.0",
+		"glob": "^7.1.6",
+		"size-plugin": "^2.0.1"
 	},
 	"peerDependencies": {
 		"prop-types": "^15.7.2",
