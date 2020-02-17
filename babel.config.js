@@ -14,7 +14,14 @@ module.exports = api => {
 		  }
 		: {
 				presets,
-				// FIXME: https://github.com/ant-design/babel-plugin-import
-				// plugins: ['babel-plugin-ramda'],
+				// NOTE: Slightly increases bundle sizes, but with increasing number of components it can change
+				plugins: [
+					[
+						'babel-plugin-ramda',
+						{
+							useES: true,
+						},
+					],
+				],
 		  };
 };

@@ -4,8 +4,7 @@ const glob = require('glob');
 const SizePlugin = require('size-plugin');
 
 const packagePath = process.cwd();
-const lundiumPackagePath = './packages/lundium';
-const relativeSrcPath = `${lundiumPackagePath}/src/components`;
+const relativeSrcPath = './src/components';
 const srcPath = path.join(packagePath, relativeSrcPath);
 
 const directoryPackages = glob.sync('**/index.js', { cwd: srcPath }).map(path.dirname);
@@ -22,12 +21,12 @@ module.exports = {
 	mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
 	plugins: process.env.NODE_ENV === 'analyze' ? [] : [new SizePlugin()],
 	entry: {
-		index: `${lundiumPackagePath}/src/index.js`,
+		index: './src/index.js',
 		...entries,
 	},
 	output: {
 		filename: '[name].js',
-		path: path.resolve(`${lundiumPackagePath}/dist`),
+		path: path.resolve('./dist'),
 		libraryTarget: 'umd',
 	},
 	module: {
@@ -36,6 +35,7 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
+				options: { rootMode: 'upward' },
 			},
 		],
 	},
