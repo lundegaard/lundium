@@ -4,8 +4,6 @@ exports[`<TextInputControl /> shallow 1`] = `
 <FormControl
   className=""
   component="input"
-  onBlur={[Function]}
-  onFocus={[Function]}
   type="text"
 />
 `;
