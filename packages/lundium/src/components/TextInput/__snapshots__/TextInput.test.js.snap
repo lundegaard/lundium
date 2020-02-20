@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput /> shallow 1`] = `
+<withGeneratedId(forwardRef(FormField))
+  autoComplete="off"
+  control={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "propTypes": Object {
+        "children": [Function],
+        "className": [Function],
+        "mask": [Function],
+        "maskOptions": [Function],
+        "type": [Function],
+      },
+      "render": [Function],
+    }
+  }
+  kind="text-input"
+/>
+`;
