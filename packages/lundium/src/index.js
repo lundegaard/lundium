@@ -44,3 +44,5 @@ export { default as NotificationStack } from './components/NotificationStack';
 export { default as Tab } from './components/Tab';
 export { default as TabBar } from './components/TabBar';
 export { default as Tabs } from './components/Tabs';
+export { default as TextInput } from './components/TextInput';
+export { default as TextInputControl } from './components/TextInputControl';
