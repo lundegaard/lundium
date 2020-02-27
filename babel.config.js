@@ -15,7 +15,8 @@ module.exports = api => {
 			[
 				'babel-plugin-ramda',
 				{
-					useES: true,
+					// NOTE: Solves issue with jest ramda imports
+					useES: !api.env('test'),
 				},
 			],
 			'react-docgen',
