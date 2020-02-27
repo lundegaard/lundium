@@ -7,7 +7,8 @@
 	"contributors": [
 		"Tomas Konrady <tomas.konrady@lundegaard.eu>",
 		"Vaclav Jancarik <vaclav.jancarik@lundegaard.eu>",
-		"Martin Machacek <martin.machacek@lundegaard.eu>"
+		"Martin Machacek <martin.machacek@lundegaard.eu>",
+		"Veronika Wernerova <veronika.wernerova@lundegaard.eu"
 	],
 	"license": "MIT",
 	"workspaces": [
