@@ -6,6 +6,7 @@ const cs_CZ = {
 	openText: 'Otevřít',
 	modalsConfirm: 'Potvrdit',
 	modalsCancel: 'Zrušit',
+	deleteText: 'Smazat',
 };
 
 export default cs_CZ;
