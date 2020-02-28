@@ -8,20 +8,18 @@ module.exports = api => {
 		],
 	];
 
-	return api.env('test')
-		? {
-				presets,
-		  }
-		: {
-				presets,
-				// NOTE: Slightly increases bundle sizes, but with increasing number of components it can change
-				plugins: [
-					[
-						'babel-plugin-ramda',
-						{
-							useES: true,
-						},
-					],
-				],
-		  };
+	return {
+		presets,
+		// NOTE: Slightly increases bundle sizes, but with increasing number of components it can change
+		plugins: [
+			[
+				'babel-plugin-ramda',
+				{
+					// NOTE: Solves issue with jest ramda imports
+					useES: !api.env('test'),
+				},
+			],
+			'react-docgen',
+		],
+	};
 };
