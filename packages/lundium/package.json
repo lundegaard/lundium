@@ -1,13 +1,10 @@
 {
 	"name": "lundium",
-	"version": "0.0.1-alpha.3",
+	"version": "0.0.1",
 	"license": "MIT",
 	"description": "Components",
-	"main": "./dist",
+	"main": "dist/index.js",
 	"sideEffects": false,
-	"files": [
-		"dist/**"
-	],
 	"scripts": {
 		"build": "webpack"
 	},
@@ -29,6 +26,5 @@
 		"prop-types": "^15.7.2",
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0"
-	},
-	"gitHead": "92812f32b28cd94957b4b8e0e8f81e085636310e"
+	}
 }

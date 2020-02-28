@@ -17,6 +17,7 @@ const entries = directoryPackages.reduce(
 	{}
 );
 
+// TODO: use rollup
 module.exports = {
 	mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
 	plugins: process.env.NODE_ENV === 'analyze' ? [] : [new SizePlugin()],
@@ -41,12 +42,4 @@ module.exports = {
 	},
 	// In case of troubleshooting: https://github.com/lerna/lerna/issues/1049
 	externals: ['react', 'react-dom'],
-	optimization: {
-		splitChunks: {
-			chunks: 'all',
-			minSize: 0,
-			name: false,
-		},
-		sideEffects: true,
-	},
 };
