@@ -6,6 +6,7 @@ const en_US = {
 	openText: 'Open',
 	modalsConfirm: 'Confirm',
 	modalsCancel: 'Cancel',
+	deleteText: 'Delete',
 };
 
 export default en_US;

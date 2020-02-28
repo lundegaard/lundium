@@ -5,13 +5,13 @@
 Install dependency into your project:
 
 ```bash
-yarn add @lundium/intl
+yarn add @lundium/locale
 ```
 
 Import some locale and add it to ThemeProvider:
 
 ```javascript
-import { en_US } from '@lundium/intl';
+import { en_US } from '@lundium/locale';
 ...
 
 <ThemeProvider theme={{ isRTL: boolean('isRTL', false), locale: en_US }}>
