@@ -6,6 +6,38 @@ exports[`<TextInput /> shallow 1`] = `
   control={
     Object {
       "$$typeof": Symbol(react.forward_ref),
+      "__docgenInfo": Object {
+        "description": "",
+        "displayName": "forwardRef(TextInputControl)",
+        "methods": Array [],
+        "props": Object {
+          "children": Object {
+            "description": "Children to be rendered in the main container.",
+            "required": false,
+            "type": Object {
+              "name": "node",
+            },
+          },
+          "className": Object {
+            "description": "Class name for root.",
+            "required": false,
+            "type": Object {
+              "name": "string",
+            },
+          },
+          "type": Object {
+            "defaultValue": Object {
+              "computed": false,
+              "value": "'text'",
+            },
+            "description": "HTML type attribute of the input.",
+            "required": false,
+            "type": Object {
+              "name": "string",
+            },
+          },
+        },
+      },
       "displayName": "forwardRef(TextInputControl)",
       "propTypes": Object {
         "children": [Function],
