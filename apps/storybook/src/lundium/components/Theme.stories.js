@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
-import { Box, Text } from 'lundium';
-import { HtmlDirection, ThemeProvider } from '@lundium/theme-basic';
+import { Box, HtmlDirection, Text, ThemeProvider } from 'lundium';
 import en_US from '@lundium/locale/dist/en_US';
 import { boolean } from '@storybook/addon-knobs';
 
