@@ -2,11 +2,11 @@
     Lundium UI
 </h1>
 
-<h1 align="center">
+<p align="center">
   <a href="https://lundegaard.eu">
     <img alt="by Lundegaard" src="./by-lundegaard.png" width="120" />
   </a>
-</h1>
+</p>
 
 <h3 align="center">
 🖍️ 🛡  🚀
