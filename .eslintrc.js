@@ -30,6 +30,7 @@ module.exports = {
 					'*.config.js',
 					'apps/**/*.config.js',
 					'packages/**/*.config.js',
+					'**/copy-files.js',
 				],
 			},
 		],
