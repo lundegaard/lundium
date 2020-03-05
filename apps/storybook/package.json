@@ -14,8 +14,8 @@
 		"lundium": "^0.0.1",
 		"ramda": "^0.27.0",
 		"ramda-extension": "^0.10.1",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0"
+		"react": "^16.13.0",
+		"react-dom": "^16.13.0"
 	},
 	"devDependencies": {
 		"@storybook/addon-actions": "^5.3.13",
