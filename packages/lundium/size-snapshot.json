@@ -1,7 +1,7 @@
 {
-	"build/umd/lundium.production.min.js": {
-		"bundled": 906137,
-		"minified": 240143,
-		"gzipped": 58858
-	}
+  "build/umd/lundium.production.min.js": {
+    "bundled": 906137,
+    "minified": 240143,
+    "gzipped": 58858
+  }
 }
