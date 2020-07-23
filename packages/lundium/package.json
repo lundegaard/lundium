@@ -1,6 +1,6 @@
 {
 	"name": "lundium",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"license": "MIT",
 	"description": "Core Lundium package containing all components",
 	"main": "build/index.js",
