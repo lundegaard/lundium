@@ -50,7 +50,7 @@ npm install lundium
 
 ## Documentation
 
-All available components with usage examples can be found in our [Storybook docs](lundium.netlify.com)
+All available components with usage examples can be found in our [Storybook docs](https://lundium.netlify.app)
 
 ## Theming
 
