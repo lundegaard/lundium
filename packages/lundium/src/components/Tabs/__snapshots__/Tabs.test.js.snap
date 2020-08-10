@@ -10,13 +10,17 @@ exports[`<Tabs /> matches snapshot when shallowly rendered 1`] = `
       key=".0"
       label="First"
       onClick={[Function]}
-    />
+    >
+      First content
+    </Tab>
     <Tab
       isActive={false}
       key=".1"
       label="Second"
       onClick={[Function]}
-    />
+    >
+      Second content
+    </Tab>
   </TabBar>
   <forwardRef(Text)>
     First content
