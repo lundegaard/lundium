@@ -19,10 +19,15 @@ const Tabs = forwardRef(
 				event.preventDefault();
 			};
 
-			const { tabLabel } = child.props;
+			const { tabLabel, ...childProps } = child.props;
 
 			return (
-				<Tab isActive={activeIndex === index} onClick={handleTabClick(index)} label={tabLabel} />
+				<Tab
+					{...childProps}
+					isActive={activeIndex === index}
+					onClick={handleTabClick(index)}
+					label={tabLabel}
+				/>
 			);
 		});
 
