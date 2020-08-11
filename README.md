@@ -61,6 +61,10 @@ Learn how you can use our default theme in your project in more detail [Theming 
 
 For localisation usecases you can use `@lundium/locale` package. Detailed walk-through can be found on [Localisation page](./packages/locale/README.md).
 
+## Example application
+
+A basic example application can be found in examples directory.
+
 ## Contribution
 
 We are open to any ideas and suggestions! Feel free to make PR!
