@@ -1,0 +1,28 @@
+body {
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+.wrapper {
+	margin: 20px auto;
+	max-width: 400px;
+}
+
+.wrapper input[type='text'] {
+	min-width: 80%;
+}
+
+ul {
+	list-style-type: none;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+}
+
+li {
+	border-bottom: 1px solid #add8e6;
+	background-color: #ffffff;
+}
+
+input[type='checkbox']:checked + label {
+	text-decoration: line-through;
+}
