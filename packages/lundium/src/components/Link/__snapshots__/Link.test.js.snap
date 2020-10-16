@@ -3,7 +3,9 @@
 exports[`<Link /> shallow 1`] = `
 <forwardRef(Box)
   as="a"
+  className=""
   href="#"
+  onKeyDown={[Function]}
 >
   Link
 </forwardRef(Box)>

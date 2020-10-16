@@ -7,6 +7,12 @@ exports[`<Tooltip /> matches snapshot when shallowly rendered 1`] = `
   delayHide={0}
   delayShow={0}
   followCursor={false}
+  mutationObserverOptions={
+    Object {
+      "childList": true,
+      "subtree": true,
+    }
+  }
   onVisibilityChange={[Function]}
   placement="bottom"
   portalContainer={<body />}

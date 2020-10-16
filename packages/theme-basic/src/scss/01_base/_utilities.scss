@@ -20,6 +20,11 @@
 	}
 }
 
+a[aria-disabled='true'] {
+	display: inline-block;  /* For IE11/ MS Edge bug */
+	pointer-events: none;
+}
+
 .min-h-100 {
 	min-height: 100vh;
 }
