@@ -22,7 +22,7 @@ Toggle.propTypes = {
 	checked: PropTypes.bool,
 	checkedLabel: PropTypes.node,
 	/** Field's control component */
-	control: PropTypes.elementType.isRequired,
+	control: PropTypes.elementType,
 	/** If set, control is disabled */
 	disabled: PropTypes.bool,
 	/** Node shown in error state. */
