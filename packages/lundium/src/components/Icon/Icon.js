@@ -26,6 +26,7 @@ const Icon = forwardRef(
 );
 
 Icon.propTypes = {
+	...Text.propTypes,
 	/** Children to be rendered in the main container. */
 	children: PropTypes.node,
 	/** Class name for root. */
@@ -38,7 +39,6 @@ Icon.propTypes = {
 	size: stringOrNumberPropType,
 	/** Type of icon. */
 	type: PropTypes.string.isRequired,
-	...Text.propTypes,
 };
 
 Icon.displayName = 'Icon';
