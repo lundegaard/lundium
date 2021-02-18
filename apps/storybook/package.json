@@ -1,6 +1,6 @@
 {
 	"name": "@lundium/storybook",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"license": "MIT",
 	"description": "Storybook application for documentation of our UI components",
 	"private": true,
@@ -9,9 +9,9 @@
 		"build": "build-storybook -o ../../build/storybook"
 	},
 	"dependencies": {
-		"@lundium/locale": "^0.2.0",
-		"@lundium/theme-basic": "^0.2.0",
-		"lundium": "^0.2.0",
+		"@lundium/locale": "^1.0.0",
+		"@lundium/theme-basic": "^1.0.0",
+		"lundium": "^1.0.0",
 		"ramda": "^0.27.0",
 		"ramda-extension": "^0.10.1",
 		"react": "^16.13.0",
