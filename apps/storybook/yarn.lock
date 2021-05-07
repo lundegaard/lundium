@@ -1917,15 +1917,15 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@lundium/locale@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@lundium/locale/-/locale-0.2.0.tgz#9293810154a96eb0a3032c74e304bb2edc46b174"
-  integrity sha512-RH5cZwx3X7sLZytr2Dizl6AK4PCqib3rTjKsYokyGUsxwQx3a9g7V1hApzLLpDXUtMz1wV8ZFeRT6z7aHlOScg==
+"@lundium/locale@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@lundium/locale/-/locale-1.0.0.tgz#4ba8cd96fab68aeae5e517f5a8ea892b92515abe"
+  integrity sha512-Ff8HA0UAEd/dgKo/qhiBUVrFO4E+qc0G9bKI5yR0Fp0Y+XyoBcT5FoOFkEOlSGDU//j3gWeLob9lFgTkosCCrw==
 
-"@lundium/theme-basic@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@lundium/theme-basic/-/theme-basic-0.2.0.tgz#51fdb934fe5b1beb2656e12650561b4674cf14e8"
-  integrity sha512-ZEO80KusmJQtosx6L2dBo5Fe9PAjCVv3OWBRjnQJL6NL939bDRLi+gBl9DTU7SWPpMuoM6ak0BGWkpexxzJTRg==
+"@lundium/theme-basic@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@lundium/theme-basic/-/theme-basic-1.0.0.tgz#891899da92d7dd2751208782be29428d5341f339"
+  integrity sha512-peRI/FM7dL0gIdE+Q5IS0+LzpczIg5ILkWGS8nTt6+L4UIAl5Ke4JPJsYKiPYdN4g3NkyDPQ1IUx5L6YyiKgQA==
   dependencies:
     bootstrap "^4.4.1"
     ramda "^0.27.0"
@@ -7435,10 +7435,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lundium@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/lundium/-/lundium-0.2.0.tgz#5a8127c5bd1f70ea7d89f7392a107f4a8e56fabd"
-  integrity sha512-hwqPKKhm8JmujIMWYrG2Y6anGdq/DsXFhGI1JNg2ArsXFl8X+Z4Y6OqU/Joe5gPlqRC5Uf9PfhNfj6f4sBBExQ==
+lundium@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/lundium/-/lundium-1.0.0.tgz#d853eaf7a2090a28ce0095a946f50e227cfb820f"
+  integrity sha512-5rYRTYO9VeA0Zr7nu6yL6tNP1s3PVcl/Gu5UW3z6LD4LHcYsU2Ntor7OVZ4vJBIdHRb3Eob76CJDQK5d0zVH9w==
   dependencies:
     invariant "^2.2.4"
     ramda "^0.27.0"
@@ -11089,9 +11089,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 unfetch@^4.1.0:
   version "4.1.0"
