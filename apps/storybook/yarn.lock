@@ -1917,15 +1917,15 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@lundium/locale@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@lundium/locale/-/locale-0.2.0.tgz#9293810154a96eb0a3032c74e304bb2edc46b174"
-  integrity sha512-RH5cZwx3X7sLZytr2Dizl6AK4PCqib3rTjKsYokyGUsxwQx3a9g7V1hApzLLpDXUtMz1wV8ZFeRT6z7aHlOScg==
+"@lundium/locale@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@lundium/locale/-/locale-1.0.0.tgz#4ba8cd96fab68aeae5e517f5a8ea892b92515abe"
+  integrity sha512-Ff8HA0UAEd/dgKo/qhiBUVrFO4E+qc0G9bKI5yR0Fp0Y+XyoBcT5FoOFkEOlSGDU//j3gWeLob9lFgTkosCCrw==
 
-"@lundium/theme-basic@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@lundium/theme-basic/-/theme-basic-0.2.0.tgz#51fdb934fe5b1beb2656e12650561b4674cf14e8"
-  integrity sha512-ZEO80KusmJQtosx6L2dBo5Fe9PAjCVv3OWBRjnQJL6NL939bDRLi+gBl9DTU7SWPpMuoM6ak0BGWkpexxzJTRg==
+"@lundium/theme-basic@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@lundium/theme-basic/-/theme-basic-1.0.0.tgz#891899da92d7dd2751208782be29428d5341f339"
+  integrity sha512-peRI/FM7dL0gIdE+Q5IS0+LzpczIg5ILkWGS8nTt6+L4UIAl5Ke4JPJsYKiPYdN4g3NkyDPQ1IUx5L6YyiKgQA==
   dependencies:
     bootstrap "^4.4.1"
     ramda "^0.27.0"
@@ -7435,10 +7435,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lundium@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/lundium/-/lundium-0.2.0.tgz#5a8127c5bd1f70ea7d89f7392a107f4a8e56fabd"
-  integrity sha512-hwqPKKhm8JmujIMWYrG2Y6anGdq/DsXFhGI1JNg2ArsXFl8X+Z4Y6OqU/Joe5gPlqRC5Uf9PfhNfj6f4sBBExQ==
+lundium@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/lundium/-/lundium-1.0.0.tgz#d853eaf7a2090a28ce0095a946f50e227cfb820f"
+  integrity sha512-5rYRTYO9VeA0Zr7nu6yL6tNP1s3PVcl/Gu5UW3z6LD4LHcYsU2Ntor7OVZ4vJBIdHRb3Eob76CJDQK5d0zVH9w==
   dependencies:
     invariant "^2.2.4"
     ramda "^0.27.0"
@@ -7612,9 +7612,9 @@ memory-fs@^0.5.0:
     readable-stream "^2.0.1"
 
 merge-deep@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.2.tgz#f39fa100a4f1bd34ff29f7d2bf4508fbb8d83ad2"
-  integrity sha512-T7qC8kg4Zoti1cFd8Cr0M+qaZfOwjlPDEdZIIPPB2JZctjaPM4fX+i7HOId69tAti2fvO6X5ldfYUONDODsrkA==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.3.tgz#1a2b2ae926da8b2ae93a0ac15d90cd1922766003"
+  integrity sha512-qtmzAS6t6grwEkNrunqTBdn0qKwFgNWvlxUbAV8es9M7Ot1EbyApytCnvE0jALPa46ZpKDUo527kKiaWplmlFA==
   dependencies:
     arr-union "^3.1.0"
     clone-deep "^0.2.4"
