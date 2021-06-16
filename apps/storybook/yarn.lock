@@ -1917,15 +1917,15 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@lundium/locale@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@lundium/locale/-/locale-0.2.0.tgz#9293810154a96eb0a3032c74e304bb2edc46b174"
-  integrity sha512-RH5cZwx3X7sLZytr2Dizl6AK4PCqib3rTjKsYokyGUsxwQx3a9g7V1hApzLLpDXUtMz1wV8ZFeRT6z7aHlOScg==
+"@lundium/locale@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@lundium/locale/-/locale-1.0.0.tgz#4ba8cd96fab68aeae5e517f5a8ea892b92515abe"
+  integrity sha512-Ff8HA0UAEd/dgKo/qhiBUVrFO4E+qc0G9bKI5yR0Fp0Y+XyoBcT5FoOFkEOlSGDU//j3gWeLob9lFgTkosCCrw==
 
-"@lundium/theme-basic@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@lundium/theme-basic/-/theme-basic-0.2.0.tgz#51fdb934fe5b1beb2656e12650561b4674cf14e8"
-  integrity sha512-ZEO80KusmJQtosx6L2dBo5Fe9PAjCVv3OWBRjnQJL6NL939bDRLi+gBl9DTU7SWPpMuoM6ak0BGWkpexxzJTRg==
+"@lundium/theme-basic@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@lundium/theme-basic/-/theme-basic-1.0.0.tgz#891899da92d7dd2751208782be29428d5341f339"
+  integrity sha512-peRI/FM7dL0gIdE+Q5IS0+LzpczIg5ILkWGS8nTt6+L4UIAl5Ke4JPJsYKiPYdN4g3NkyDPQ1IUx5L6YyiKgQA==
   dependencies:
     bootstrap "^4.4.1"
     ramda "^0.27.0"
@@ -7435,10 +7435,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lundium@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/lundium/-/lundium-0.2.0.tgz#5a8127c5bd1f70ea7d89f7392a107f4a8e56fabd"
-  integrity sha512-hwqPKKhm8JmujIMWYrG2Y6anGdq/DsXFhGI1JNg2ArsXFl8X+Z4Y6OqU/Joe5gPlqRC5Uf9PfhNfj6f4sBBExQ==
+lundium@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/lundium/-/lundium-1.0.0.tgz#d853eaf7a2090a28ce0095a946f50e227cfb820f"
+  integrity sha512-5rYRTYO9VeA0Zr7nu6yL6tNP1s3PVcl/Gu5UW3z6LD4LHcYsU2Ntor7OVZ4vJBIdHRb3Eob76CJDQK5d0zVH9w==
   dependencies:
     invariant "^2.2.4"
     ramda "^0.27.0"
@@ -8713,19 +8713,10 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.0.2:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.0.2.tgz#482282c09a42706d1fc9a069b73f44ec08391dc9"
   integrity sha512-LmeoohTpp/K4UiyQCwuGWlONxXamGzCMtFxLq4W1nZVGIQLYvMCJx3yAF9qyyuFpflABI9yVdtJAqbihOsCsJQ==
 
-postcss@^7.0.0, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.23, postcss@^7.0.5, postcss@^7.0.6:
-  version "7.0.26"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.26.tgz#5ed615cfcab35ba9bbb82414a4fa88ea10429587"
-  integrity sha512-IY4oRjpXWYshuTDFxMVkJDtWIk2LhsTlu8bZnbEJA4+bYT16Lvpo8Qv6EvDumhYRgzjZl489pmsY3qVgJQ08nA==
-  dependencies:
-    chalk "^2.4.2"
-    source-map "^0.6.1"
-    supports-color "^6.1.0"
-
-postcss@^7.0.27, postcss@^7.0.32:
-  version "7.0.32"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.32.tgz#4310d6ee347053da3433db2be492883d62cec59d"
-  integrity sha512-03eXong5NLnNCD05xscnGKGDZ98CyzoqPSMjOe6SuoQY7Z2hIj0Ld1g/O/UQRuOle2aRtiIRDg9tDcTGAkLfKw==
+postcss@^7.0.0, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.23, postcss@^7.0.27, postcss@^7.0.32, postcss@^7.0.5, postcss@^7.0.6:
+  version "7.0.36"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
+  integrity sha512-BebJSIUMwJHRH0HAQoxN4u1CN86glsrwsW0q7T+/m44eXOUAxSNdHRkNZPYz5vVUbg17hFgOQDE7fZk7li3pZw==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
