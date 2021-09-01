@@ -30,12 +30,14 @@ const Tab = ({
 					['tab-link--invalid']: isInvalid,
 					['tab-link--wizard']: !isNil(stepNumber),
 				},
-				className
+				className,
 			)}
 			{...(isDisabled ? {} : { href })}
 			{...otherProps}
 		>
-			{!isNil(stepNumber) && <span className="tab-link__number">{stepNumber}</span>}
+			{!isNil(stepNumber) && (
+				<span className="tab-link__number">{stepNumber}</span>
+			)}
 			{label && (
 				<Box as="span" className="tab-link__label">
 					{label}

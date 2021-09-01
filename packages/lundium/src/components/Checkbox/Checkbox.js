@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import CheckboxControl from '../CheckboxControl';
 import FormField from '../FormField';
 
-const Checkbox = props => <FormField control={CheckboxControl} kind="checkbox" {...props} />;
+const Checkbox = props => (
+	<FormField control={CheckboxControl} kind="checkbox" {...props} />
+);
 
 Checkbox.propTypes = {
 	/** Additional content to render after the control. */
@@ -24,13 +26,15 @@ Checkbox.propTypes = {
 	groupProps: PropTypes.object,
 	/** If `true`, input label has floating animation. */
 	hasFloatingLabel: PropTypes.bool,
-	/** Used to pair the control with a label. If undefined, we use a generated one. */
+	/** Used to pair control with a label. If undefined, we use generated one. */
 	id: PropTypes.any,
-	/** If `true`, label is absolutely positioned on the right side of the form group. */
+	/** If `true`, label is absolutely positioned on the right side of
+	 * the form group. */
 	inline: PropTypes.bool,
 	/** If `true`, label is hidden. */
 	isLabelHidden: PropTypes.bool,
-	/** Used to pass a context className to FormGroup (to properly style FormControl and Label) */
+	/** Used to pass a context className to FormGroup
+	 * (to properly style FormControl and Label) */
 	kind: PropTypes.string,
 	/** Label value */
 	label: PropTypes.node,

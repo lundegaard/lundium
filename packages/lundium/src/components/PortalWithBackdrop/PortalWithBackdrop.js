@@ -21,7 +21,9 @@ const PortalWithBackdrop = ({
 	className,
 }) => {
 	const modalContainer =
-		container || findElementById(portalContainerId) || getParentContainer(portalContainerTagName);
+		container ||
+		findElementById(portalContainerId) ||
+		getParentContainer(portalContainerTagName);
 
 	useEffect(() => {
 		addBodyClass(isVisible);

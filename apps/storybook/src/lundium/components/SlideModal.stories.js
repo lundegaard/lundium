@@ -1,7 +1,10 @@
 import React, { Fragment, useState } from 'react';
 import { BasicSlideModal, Button, SlideModal } from 'lundium';
 
-export default { title: 'Modals/SlideModal', component: SlideModal };
+export default {
+	title: 'Modals/SlideModal',
+	component: SlideModal,
+};
 
 export const basic = () =>
 	// Workaround to be able to see code in story

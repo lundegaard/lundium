@@ -10,7 +10,7 @@ describe('<PortalWithBackdrop />', () => {
 		const wrapper = shallow(
 			<PortalWithBackdrop {...requiredProps}>
 				<div />
-			</PortalWithBackdrop>
+			</PortalWithBackdrop>,
 		);
 		expect(wrapper).toMatchSnapshot();
 	});

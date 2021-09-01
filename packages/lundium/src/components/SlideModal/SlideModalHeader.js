@@ -5,7 +5,14 @@ import { cx } from 'ramda-extension';
 import Grid from '../Grid';
 import Text from '../Text';
 
-const SlideModalHeader = ({ children, className, title, subtitle, details, ...otherProps }) => (
+const SlideModalHeader = ({
+	children,
+	className,
+	title,
+	subtitle,
+	details,
+	...otherProps
+}) => (
 	<Grid
 		justifyContent="between"
 		alignItems="end"
@@ -16,7 +23,12 @@ const SlideModalHeader = ({ children, className, title, subtitle, details, ...ot
 		<Text className="slide-modal__title">{title}</Text>
 		{subtitle && <Text className="slide-modal__sub-title">{subtitle}</Text>}
 		{details && (
-			<Grid flex flexWrap flexDirection={['column', 'row']} className="slide-modal__details">
+			<Grid
+				flex
+				flexWrap
+				flexDirection={['column', 'row']}
+				className="slide-modal__details"
+			>
 				{details}
 			</Grid>
 		)}

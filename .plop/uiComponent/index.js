@@ -43,13 +43,16 @@ module.exports = {
 			{
 				type: 'add',
 				data,
-				path: srcDir + '/src/components/{{pascalCase name}}/{{pascalCase name}}.js',
+				path:
+					srcDir + '/src/components/{{pascalCase name}}/{{pascalCase name}}.js',
 				templateFile: path.join(__dirname, './statelessComponent.js.hbs'),
 			},
 			{
 				type: 'add',
 				data,
-				path: srcDir + '/src/components/{{pascalCase name}}/{{pascalCase name}}.test.js',
+				path:
+					srcDir +
+					'/src/components/{{pascalCase name}}/{{pascalCase name}}.test.js',
 				templateFile: path.join(__dirname, './test.js.hbs'),
 			},
 			{
@@ -71,7 +74,9 @@ module.exports = {
 						{
 							type: 'add',
 							data,
-							path: storybookDir + '/src/lundium/components/{{pascalCase name}}.stories.js',
+							path:
+								storybookDir +
+								'/src/lundium/components/{{pascalCase name}}.stories.js',
 							templateFile: path.join(__dirname, './stories.js.hbs'),
 						},
 				  ]

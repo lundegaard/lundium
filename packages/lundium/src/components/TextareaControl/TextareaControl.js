@@ -5,7 +5,12 @@ import { cx } from 'ramda-extension';
 import FormControl from '../FormControl';
 
 const TextareaControl = ({ children, className, type = 'text', ...rest }) => (
-	<FormControl className={cx(className)} component="textarea" type={type} {...rest}>
+	<FormControl
+		className={cx(className)}
+		component="textarea"
+		type={type}
+		{...rest}
+	>
 		{children}
 	</FormControl>
 );

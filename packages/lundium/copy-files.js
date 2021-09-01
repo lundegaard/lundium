@@ -26,7 +26,9 @@ async function includeFileInBuild(file) {
  * @param {string} rootDir
  */
 async function createModulePackages({ from, to }) {
-	const directoryPackages = glob.sync('*/index.js', { cwd: from }).map(path.dirname);
+	const directoryPackages = glob
+		.sync('*/index.js', { cwd: from })
+		.map(path.dirname);
 
 	await Promise.all(
 		directoryPackages.map(async directoryPackage => {
@@ -36,19 +38,32 @@ async function createModulePackages({ from, to }) {
 			};
 			const packageJsonPath = path.join(to, directoryPackage, 'package.json');
 
-			await fse.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2));
+			await fse.writeFile(
+				packageJsonPath,
+				JSON.stringify(packageJson, null, 2),
+			);
 
 			return packageJsonPath;
-		})
+		}),
 	);
 }
 
 async function createPackageFile() {
-	const packageData = await fse.readFile(path.resolve(packagePath, './package.json'), 'utf8');
-	/* eslint-disable-next-line no-unused-vars */
-	const { nyc, scripts, devDependencies, workspaces, ...packageDataOther } = JSON.parse(
-		packageData
+	const packageData = await fse.readFile(
+		path.resolve(packagePath, './package.json'),
+		'utf8',
 	);
+	/* eslint-disable no-unused-vars */
+	const {
+		nyc,
+		scripts,
+		devDependencies,
+		workspaces,
+		publishConfig,
+		...packageDataOther
+	} = JSON.parse(packageData);
+	/* eslint-enable no-unused-vars */
+
 	const newPackageData = {
 		...packageDataOther,
 		private: false,
@@ -57,7 +72,11 @@ async function createPackageFile() {
 	};
 	const targetPath = path.resolve(buildPath, './package.json');
 
-	await fse.writeFile(targetPath, JSON.stringify(newPackageData, null, 2), 'utf8');
+	await fse.writeFile(
+		targetPath,
+		JSON.stringify(newPackageData, null, 2),
+		'utf8',
+	);
 	console.log(`Created package.json in ${targetPath}`);
 
 	return newPackageData;
@@ -91,7 +110,7 @@ async function addLicense(packageData) {
 					throw err;
 				}
 			}
-		})
+		}),
 	);
 }
 
@@ -101,13 +120,16 @@ async function run() {
 
 		await Promise.all(
 			['./README.md', '../../CHANGELOG.md', '../../LICENSE.md'].map(file =>
-				includeFileInBuild(file)
-			)
+				includeFileInBuild(file),
+			),
 		);
 
 		await addLicense(packageData);
 
-		await createModulePackages({ from: srcPath, to: buildPath });
+		await createModulePackages({
+			from: srcPath,
+			to: buildPath,
+		});
 	} catch (err) {
 		console.error(err);
 		process.exit(1);

@@ -26,11 +26,14 @@ const NotificationStack = ({
 				notification => (
 					<CSSTransition key={`transition-${notification.id}`} {...transition}>
 						<div>
-							{renderNotification({ ...notification, key: `notification-${notification.id}` })}
+							{renderNotification({
+								...notification,
+								key: `notification-${notification.id}`,
+							})}
 						</div>
 					</CSSTransition>
 				),
-				notifications
+				notifications,
 			)}
 		</TransitionGroup>
 	</Portal>

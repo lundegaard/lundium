@@ -24,7 +24,9 @@ const sortStories = sortOrder => {
 		if (aGroup === bGroup) {
 			const group = sortOrder[aGroup] || [aGroup];
 
-			return getSortPosition(aComponent, group) - getSortPosition(bComponent, group);
+			return (
+				getSortPosition(aComponent, group) - getSortPosition(bComponent, group)
+			);
 		}
 
 		// Sort groups.

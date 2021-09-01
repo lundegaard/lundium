@@ -13,7 +13,9 @@ export const quickWithoutAnimation = () => (
 	</Spinner>
 );
 
-export const add10Seconds = () => <Spinner visibilityDelay="10">Loading data</Spinner>;
+export const add10Seconds = () => (
+	<Spinner visibilityDelay="10">Loading data</Spinner>
+);
 
 export const twoSecondsNoAnimation = () => (
 	<Spinner visibilityDelay="2" animationDisabled>

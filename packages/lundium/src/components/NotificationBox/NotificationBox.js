@@ -17,7 +17,11 @@ const NotificationBox = ({ children, kind = 'info', className, ...rest }) => (
 	<Card
 		borderRadius
 		boxShadow={['none', 'sm']}
-		className={cx('notification-box', { [`notification-box--kind-${kind}`]: !!kind }, className)}
+		className={cx(
+			'notification-box',
+			{ [`notification-box--kind-${kind}`]: !!kind },
+			className,
+		)}
 		py={{ xs: 2, md: 3 }}
 		px={{ xs: 3, md: 4 }}
 		{...rest}

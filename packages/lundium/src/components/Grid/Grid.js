@@ -30,17 +30,19 @@ const sanitizeCssValue = property => defaultProperty => cssValue =>
 const convertToDisplay = (property, defaultProperty, cssResponsiveValue) => {
 	const getProperty = sanitizeCssValue(property)(defaultProperty);
 
-	return cssResponsiveValue && (isArray(cssResponsiveValue) || isPlainObject(cssResponsiveValue))
+	return cssResponsiveValue &&
+		(isArray(cssResponsiveValue) || isPlainObject(cssResponsiveValue))
 		? map(getProperty, cssResponsiveValue)
 		: getProperty(cssResponsiveValue);
 };
 
 const shouldSetFlexAutomagically = o(
 	isNotEmpty,
-	pick(['alignItems', 'alignSelf', 'justifyContent', 'flexDirection'])
+	pick(['alignItems', 'alignSelf', 'justifyContent', 'flexDirection']),
 );
 
-/* Function is here for backwards compatibility. Use `display` instead of `inline` and `flex` */
+/* Function is here for backwards compatibility.
+Use `display` instead of `inline` and `flex` */
 const getDisplay = ({ flex, ...rest }) => {
 	if (flex) {
 		return convertToDisplay('flex', 'block', flex);
@@ -56,14 +58,17 @@ const flexWrapToClassName = propToClassName(isValidFlexWrap)('flex');
 const flexDirectionToClassName = propToClassName(isNotNilNorEmpty)('flex');
 const alignSelfToClassName = propToClassName(isNotNilNorEmpty)('align-self');
 const alignItemsToClassName = propToClassName(isNotNilNorEmpty)('align-items');
-const justifyContentToClassName = propToClassName(isNotNilNorEmpty)('justify-content');
+const justifyContentToClassName = propToClassName(isNotNilNorEmpty)(
+	'justify-content',
+);
 const offsetToClassName = propToClassName(isNotNilNorEmpty)('offset');
 
 /**
  * Grid component is based on Twitter bootstraps naming for class names.
  * Can act as a container, row or column.
  *
- * If Grid is a container you can determine if it is fluid or not by `fluid` property.
+ * If Grid is a container you can determine if it is fluid or not by
+ * `fluid` property.
  * If Grid is a column you can add offset with `offset` property.
  *
  * Way you specify responsive behaviour is based on
@@ -105,7 +110,7 @@ const Grid = forwardRef((props, ref) => {
 				justifyContentToClassName(justifyContent),
 				colToClassName(col),
 				offsetToClassName(offset),
-				className
+				className,
 			)}
 			display={getDisplay(props)}
 			ref={ref}
@@ -118,7 +123,7 @@ const Grid = forwardRef((props, ref) => {
 Grid.displayName = 'forwardRef(Grid)';
 
 const alignPropType = getResponsivePropType(
-	PropTypes.oneOf(['start', 'center', 'end', 'stretch', 'baseline', ''])
+	PropTypes.oneOf(['start', 'center', 'end', 'stretch', 'baseline', '']),
 );
 
 Grid.propTypes = {
@@ -140,15 +145,16 @@ Grid.propTypes = {
 	flex: responsiveBoolOrStringPropType,
 	/** Direction of flex display. */
 	flexDirection: getResponsivePropType(
-		PropTypes.oneOf(['row', 'column', 'row-reverse', 'column-reverse', ''])
+		PropTypes.oneOf(['row', 'column', 'row-reverse', 'column-reverse', '']),
 	),
 	/** If true, flex items wrap in container. */
 	flexWrap: getResponsivePropType(PropTypes.oneOf(['wrap', 'nowrap'])),
-	/** If true, Grid represents fluid container. Use only if `container` is set to `true`. */
+	/** If true, Grid represents fluid container.
+	 * Use only if `container` is set to `true`. */
 	fluid: responsiveBoolPropType,
 	/** Items positioning in containter's main axis. */
 	justifyContent: getResponsivePropType(
-		PropTypes.oneOf(['start', 'center', 'end', 'around', 'between', ''])
+		PropTypes.oneOf(['start', 'center', 'end', 'around', 'between', '']),
 	),
 	/** Grid column`s offset. Use only if `col` is set. */
 	offset: responsiveNumberPropType,

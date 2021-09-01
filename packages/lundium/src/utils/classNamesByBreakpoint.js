@@ -12,7 +12,9 @@ const BREAKPOINTS = ['xs', 'sm', 'md', 'lg', 'xl'];
 const getBreakpointByIndex = nth(__, BREAKPOINTS);
 
 const prepareBreakpointArrayFromObject = obj =>
-	BREAKPOINTS.map(breakpoint => (isNilOrEmptyString(obj[breakpoint]) ? null : obj[breakpoint]));
+	BREAKPOINTS.map(breakpoint =>
+		isNilOrEmptyString(obj[breakpoint]) ? null : obj[breakpoint],
+	);
 
 const prepareBreakpointArray = cond([
 	[isNilOrEmpty, alwaysEmptyArray],
@@ -24,7 +26,8 @@ const prepareBreakpointArray = cond([
 const prepareClassNameFactory = useWith(__, [identity, getBreakpointByIndex]);
 
 /**
- * Creates array of classNames for grid framework based on "xs, sm, md, lg, xl" breakpoints.
+ * Creates array of classNames for grid framework based on
+ * "xs, sm, md, lg, xl" breakpoints.
  *
  * @sig (String -> String -> String) -> [String] -> [String]
  *

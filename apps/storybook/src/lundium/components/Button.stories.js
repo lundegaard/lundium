@@ -12,7 +12,10 @@ export const withClickListener = () => (
 );
 
 export const primary = () => (
-	<Button kind={select('kind', BUTTON_TYPES, 'primary')} disabled={boolean('disabled', false)}>
+	<Button
+		kind={select('kind', BUTTON_TYPES, 'primary')}
+		disabled={boolean('disabled', false)}
+	>
 		{text('Text', 'Click me')}
 	</Button>
 );

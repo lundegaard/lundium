@@ -39,7 +39,9 @@ describe('<Toggle />', () => {
 	});
 
 	it('is not checked when receives prop checked={false} and has correct label', () => {
-		const wrapper = mount(<Toggle {...requiredProps} checked={false} readOnly />);
+		const wrapper = mount(
+			<Toggle {...requiredProps} checked={false} readOnly />,
+		);
 		const checkbox = wrapper.find(checkboxSelector);
 		const label = wrapper.find(labelSelector);
 		expect(checkbox.props().checked).toBeFalsy();

@@ -9,7 +9,7 @@ const MenuItem = ({ className, noGutters, ...rest }) => (
 				menu__item: true,
 				['menu__item--no-gutters']: noGutters,
 			},
-			className
+			className,
 		)}
 		{...rest}
 	/>

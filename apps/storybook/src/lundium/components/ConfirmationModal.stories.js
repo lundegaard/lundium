@@ -1,7 +1,10 @@
 import React, { Fragment, useState } from 'react';
 import { Button, ConfirmationModal } from 'lundium';
 
-export default { title: 'Modals/ConfirmationModal', component: ConfirmationModal };
+export default {
+	title: 'Modals/ConfirmationModal',
+	component: ConfirmationModal,
+};
 
 export const basic = () =>
 	// Workaround to be able to see code in story

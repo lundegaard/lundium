@@ -11,7 +11,7 @@ const entries = filePaths.reduce(
 		...entries,
 		[newEntry]: `./src/${newEntry}.js`,
 	}),
-	{}
+	{},
 );
 
 module.exports = {

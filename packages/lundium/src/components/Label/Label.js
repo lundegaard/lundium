@@ -4,7 +4,14 @@ import { cx } from 'ramda-extension';
 
 import { useTheme } from '../ThemeProvider';
 
-const Label = ({ children, className, isHidden, disabled, readOnly, ...rest }) => {
+const Label = ({
+	children,
+	className,
+	isHidden,
+	disabled,
+	readOnly,
+	...rest
+}) => {
 	const theme = useTheme();
 
 	return (
@@ -18,7 +25,7 @@ const Label = ({ children, className, isHidden, disabled, readOnly, ...rest }) =
 					'control-label--readonly': readOnly,
 					'control-label--disabled': disabled,
 				},
-				className
+				className,
 			)}
 		>
 			{children}

@@ -6,7 +6,9 @@ export default { title: 'Others/LabeledIcon', component: LabeledIcon };
 
 const statisticsIcon = theme.iconTypes.find(type => type === 'statistics');
 
-export const basic = () => <LabeledIcon iconType={statisticsIcon}>Statistics</LabeledIcon>;
+export const basic = () => (
+	<LabeledIcon iconType={statisticsIcon}>Statistics</LabeledIcon>
+);
 
 export const iconBeforeLabel = () => (
 	<LabeledIcon iconType={statisticsIcon} iconBeforeText>

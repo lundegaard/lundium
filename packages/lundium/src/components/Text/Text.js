@@ -6,13 +6,24 @@ import classNamesByBreakpoint from '../../utils/classNamesByBreakpoint';
 import Box from '../Box';
 
 const alignToClassName = classNamesByBreakpoint((align, breakpoint) =>
-	breakpoint === 'xs' ? `text-${align}` : `text-${breakpoint}-${align}`
+	breakpoint === 'xs' ? `text-${align}` : `text-${breakpoint}-${align}`,
 );
 
 const Text = forwardRef(
 	(
-		{ align, as = 'p', children, wrap, transform, className, color, weight, size, ...rest },
-		ref
+		{
+			align,
+			as = 'p',
+			children,
+			wrap,
+			transform,
+			className,
+			color,
+			weight,
+			size,
+			...rest
+		},
+		ref,
 	) => (
 		<Box
 			ref={ref}
@@ -27,19 +38,21 @@ const Text = forwardRef(
 					[`text-${size}`]: size,
 					[`font-weight-${weight}`]: weight,
 				},
-				alignToClassName && alignToClassName(align)
+				alignToClassName && alignToClassName(align),
 			)}
 		>
 			{children}
 		</Box>
-	)
+	),
 );
 Text.displayName = 'forwardRef(Text)';
 
 Text.propTypes = {
 	align: PropTypes.oneOfType([
 		PropTypes.object,
-		PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])),
+		PropTypes.arrayOf(
+			PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+		),
 		PropTypes.oneOf(['left', 'center', 'right']),
 	]),
 	/** Tag used for root component */
@@ -51,7 +64,13 @@ Text.propTypes = {
 	color: PropTypes.string,
 	size: PropTypes.oneOf(['md', 'lg']),
 	transform: PropTypes.oneOf(['lowercase', 'uppercase', 'capitalize']),
-	weight: PropTypes.oneOf(['extra-bold', 'bold', 'semibold', 'normal', 'light']),
+	weight: PropTypes.oneOf([
+		'extra-bold',
+		'bold',
+		'semibold',
+		'normal',
+		'light',
+	]),
 	wrap: PropTypes.oneOf(['wrap', 'nowrap', 'truncate']),
 	...Box.propTypes,
 };

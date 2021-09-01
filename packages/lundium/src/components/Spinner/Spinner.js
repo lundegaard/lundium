@@ -25,7 +25,10 @@ const Spinner = ({
 	const changeVisibility = () => setShowLoader(true);
 
 	const isSmall = size === 'sm';
-	const gridClasses = cx(['data-status', ...(animationDisabled ? [] : ['fade-in'])]);
+	const gridClasses = cx([
+		'data-status',
+		...(animationDisabled ? [] : ['fade-in']),
+	]);
 
 	if (!showLoader) {
 		return null;
@@ -33,7 +36,9 @@ const Spinner = ({
 
 	const svg = (
 		<svg
-			className={cx(className, 'loader', { 'loader--sm': isSmall })}
+			className={cx(className, 'loader', {
+				'loader--sm': isSmall,
+			})}
 			viewBox="0 0 60 60"
 			xmlns="http://www.w3.org/2000/svg"
 		>

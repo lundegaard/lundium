@@ -1,6 +1,6 @@
 module.exports = {
 	root: true,
-	extends: ['react-union'],
+	extends: ['lundegaard'],
 	plugins: ['react-hooks'],
 	rules: {
 		'import/order': ['error', { 'newlines-between': 'always' }],

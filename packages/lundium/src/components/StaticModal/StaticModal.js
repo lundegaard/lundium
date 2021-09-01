@@ -25,8 +25,16 @@ export const StaticModal = ({
 	}, [isVisible, onOpen]);
 
 	return (
-		<PortalWithBackdrop isVisible={isVisible} onBackdropClick={onClose} center={center}>
-			<Box className={cx('modal', className)} onClick={stopPropagation} {...otherProps}>
+		<PortalWithBackdrop
+			isVisible={isVisible}
+			onBackdropClick={onClose}
+			center={center}
+		>
+			<Box
+				className={cx('modal', className)}
+				onClick={stopPropagation}
+				{...otherProps}
+			>
 				<Button kind="blank" className="modal__close" onClick={onClose}>
 					<Icon type="cancel" />
 				</Button>
@@ -51,4 +59,6 @@ StaticModal.propTypes = {
 	onOpen: PropTypes.func,
 };
 
-export default withTransition(StaticModal, { trigger: 'isVisible' });
+export default withTransition(StaticModal, {
+	trigger: 'isVisible',
+});

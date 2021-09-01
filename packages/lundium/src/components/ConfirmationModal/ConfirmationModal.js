@@ -21,10 +21,21 @@ const ConfirmationModal = ({
 	const { locale } = useTheme();
 
 	return (
-		<BasicStaticModal id={id} titleCenter title={title} isVisible={isVisible} onClose={onCancel}>
+		<BasicStaticModal
+			id={id}
+			titleCenter
+			title={title}
+			isVisible={isVisible}
+			onClose={onCancel}
+		>
 			<Box mt={3}>
 				<Text className="text-center">{description}</Text>
-				<Grid justifyContent="center" flexDirection={['column', 'row']} pt={3} pb={2}>
+				<Grid
+					justifyContent="center"
+					flexDirection={['column', 'row']}
+					pt={3}
+					pb={2}
+				>
 					<Box mt={4} className="text-center">
 						<Button kind="secondary" outline mr={['', 3]} onClick={onCancel}>
 							{cancelLabel || locale.modalsCancel}

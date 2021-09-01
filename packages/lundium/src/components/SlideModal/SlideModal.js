@@ -32,7 +32,11 @@ export const SlideModal = ({
 				onClick={stopPropagation}
 				{...otherProps}
 			>
-				<Grid justifyContent="end" alignItems="center" className="slide-modal__controls">
+				<Grid
+					justifyContent="end"
+					alignItems="center"
+					className="slide-modal__controls"
+				>
 					<Button kind="blank" size="xs" onClick={onClose}>
 						<Icon type="cancel" size={18} />
 					</Button>
@@ -58,4 +62,6 @@ SlideModal.propTypes = {
 	size: PropTypes.oneOf(['sm', 'md', 'lg']),
 };
 
-export default withTransition(SlideModal, { trigger: 'isVisible' });
+export default withTransition(SlideModal, {
+	trigger: 'isVisible',
+});
