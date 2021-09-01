@@ -10,15 +10,18 @@ const propToClassName = prefix =>
 	classNamesByBreakpoint(
 		(value, breakpoint) =>
 			!isNilOrEmptyString(value) &&
-			(breakpoint === 'xs' ? `${prefix}-${value}` : `${prefix}-${breakpoint}-${value}`)
+			(breakpoint === 'xs'
+				? `${prefix}-${value}`
+				: `${prefix}-${breakpoint}-${value}`),
 	);
 const displayToClassName = propToClassName('d');
 
 const omitInvalidProps = compose(
 	fromPairs,
-	// filter only event handlers and data-attributes. Due to backwards compatibily we can't use `elementProps`
+	// filter only event handlers and data-attributes.
+	// Due to backwards compatibily we can't use `elementProps`
 	filter(([prop]) => test(/^(on|data-|role|aria-)/, prop)),
-	toPairs
+	toPairs,
 );
 
 const DIMENSIONS = [
@@ -41,29 +44,42 @@ const DIMENSIONS = [
 
 const Box = forwardRef(
 	(
-		{ children, as: Comp = 'div', className, display, hasStrictAttributes, elementProps, ...rest },
-		ref
+		{
+			children,
+			as: Comp = 'div',
+			className,
+			display,
+			hasStrictAttributes,
+			elementProps,
+			...rest
+		},
+		ref,
 	) => (
 		<Comp
 			className={cx(
 				...map(x => propToClassName(x)(rest[x]))(DIMENSIONS),
 				displayToClassName(display),
-				className
+				className,
 			)}
 			ref={ref}
-			{...(hasStrictAttributes ? omitInvalidProps(rest) : omit(DIMENSIONS, rest))}
+			{...(hasStrictAttributes
+				? omitInvalidProps(rest)
+				: omit(DIMENSIONS, rest))}
 			{...elementProps}
 		>
 			{children}
 		</Comp>
-	)
+	),
 );
 
 Box.displayName = 'forwardRef(Box)';
 
 const dimensionsPropTypes = DIMENSIONS.reduce(
-	(propTypes, dimension) => ({ ...propTypes, [dimension]: responsiveStringOrNumberPropType }),
-	{}
+	(propTypes, dimension) => ({
+		...propTypes,
+		[dimension]: responsiveStringOrNumberPropType,
+	}),
+	{},
 );
 
 Box.propTypes = {

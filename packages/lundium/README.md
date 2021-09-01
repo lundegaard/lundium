@@ -21,4 +21,5 @@ import { Box, Grid } from 'lundium';
 
 ## Documentation
 
-All available components with usage examples can be found in our [Storybook docs](https://compassionate-carson-ce6ff5.netlify.com/?path=/story/introduction-welcome--page)
+All available components with usage examples can be found in our
+[Storybook docs](https://compassionate-carson-ce6ff5.netlify.com/?path=/story/introduction-welcome--page)

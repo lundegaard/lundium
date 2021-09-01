@@ -21,4 +21,6 @@ export const basic = () => <BasicShowcase />;
 
 export const withBorders = () => <BasicShowcase m={1} />;
 
-export const withResponsiveMargins = () => <BasicShowcase m={[1, 2, 3, 4, 5]} />;
+export const withResponsiveMargins = () => (
+	<BasicShowcase m={[1, 2, 3, 4, 5]} />
+);

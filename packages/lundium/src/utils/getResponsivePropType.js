@@ -10,6 +10,10 @@ const getObjectPropType = propType =>
 	});
 
 const getResponsivePropType = propType =>
-	PropTypes.oneOfType([propType, PropTypes.arrayOf(propType), getObjectPropType(propType)]);
+	PropTypes.oneOfType([
+		propType,
+		PropTypes.arrayOf(propType),
+		getObjectPropType(propType),
+	]);
 
 export default getResponsivePropType;

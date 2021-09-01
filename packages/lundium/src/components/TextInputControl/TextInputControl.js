@@ -4,11 +4,19 @@ import { cx } from 'ramda-extension';
 
 import FormControl from '../FormControl';
 
-const TextInputControl = forwardRef(({ children, className, type = 'text', ...rest }, ref) => (
-	<FormControl className={cx(className)} component="input" type={type} ref={ref} {...rest}>
-		{children}
-	</FormControl>
-));
+const TextInputControl = forwardRef(
+	({ children, className, type = 'text', ...rest }, ref) => (
+		<FormControl
+			className={cx(className)}
+			component="input"
+			type={type}
+			ref={ref}
+			{...rest}
+		>
+			{children}
+		</FormControl>
+	),
+);
 
 TextInputControl.displayName = 'forwardRef(TextInputControl)';
 

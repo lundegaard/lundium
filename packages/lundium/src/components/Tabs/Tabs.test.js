@@ -13,7 +13,7 @@ describe('<Tabs />', () => {
 			<Tabs {...requiredProps}>
 				<Text tabLabel="First">First content</Text>
 				<Text tabLabel="Second">Second content</Text>
-			</Tabs>
+			</Tabs>,
 		);
 		expect(wrapper).toMatchSnapshot();
 	});

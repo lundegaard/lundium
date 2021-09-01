@@ -1,6 +1,7 @@
 ## Theming
 
-Theme package from lundium contains basic theme for components. In order to use it, we first have to import library into project:
+Theme package from lundium contains basic theme for components. In
+order to use it, we first have to import library into project:
 
 ```bash
 yarn add @lundium/theme-basic
@@ -16,7 +17,9 @@ Then, we can load minified styled inside of application root:
 import '@lundium/theme-basic/dist/index.css';
 ```
 
-If you want to use only a part of predefined styles, you can use sass source files. They can be imported in a same way as you'd partialy import bootstrap files: (into you root scss file preferably)
+If you want to use only a part of predefined styles, you can use sass
+source files. They can be imported in a same way as you'd partialy
+import bootstrap files: (into you root scss file preferably)
 
 ```css
 @import 'node_modules/@lundium/theme-basic/scss/front.scss';

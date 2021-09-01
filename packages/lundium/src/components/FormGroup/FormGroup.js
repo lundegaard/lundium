@@ -50,7 +50,7 @@ const FormGroup = ({
 						'is-focused': isFocused,
 						'without-label': !hasLabel,
 					},
-					className
+					className,
 				)}
 			>
 				{children}
@@ -70,9 +70,11 @@ FormGroup.propTypes = {
 	hasFloatingLabel: PropTypes.bool,
 	/** If `true`, the form group includes a label. */
 	hasLabel: PropTypes.bool,
-	/** If `true`, form field is in warning state. If `hasError` is set, property is ignored. */
+	/** If `true`, form field is in warning state.
+	 * If `hasError` is set, property is ignored. */
 	hasWarning: PropTypes.bool,
-	/** If `true`, label is absolutely positioned on the right side of the form group. */
+	/** If `true`, label is absolutely positioned on the right side of
+	 * the form group. */
 	isInline: PropTypes.bool,
 	/** ClassName used to style nested elements (labels and form controls). */
 	kind: PropTypes.string,

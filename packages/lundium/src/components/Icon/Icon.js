@@ -6,7 +6,10 @@ import { stringOrNumberPropType } from '../../utils/types';
 import Text from '../Text';
 
 const Icon = forwardRef(
-	({ children, type, size = '14', className, color = 'dark', ...rest }, ref) => (
+	(
+		{ children, type, size = '14', className, color = 'dark', ...rest },
+		ref,
+	) => (
 		<Text
 			as="i"
 			{...rest}
@@ -16,13 +19,13 @@ const Icon = forwardRef(
 				`icon--type-${type}`,
 				`icon--size-${size}`,
 				`color-${color}`,
-				className
+				className,
 			)}
 			ref={ref}
 		>
 			{children}
 		</Text>
-	)
+	),
 );
 
 Icon.propTypes = {

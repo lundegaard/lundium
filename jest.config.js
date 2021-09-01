@@ -1,4 +1,10 @@
-const ignorePatterns = ['/.history/', '/node_modules/', '/es/', '/dist/', '/lib/'];
+const ignorePatterns = [
+	'/.history/',
+	'/node_modules/',
+	'/es/',
+	'/dist/',
+	'/lib/',
+];
 module.exports = {
 	snapshotSerializers: ['enzyme-to-json/serializer'],
 	setupFilesAfterEnv: ['<rootDir>/testsSetup.js'],

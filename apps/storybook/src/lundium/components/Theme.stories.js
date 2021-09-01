@@ -6,7 +6,12 @@ import { boolean } from '@storybook/addon-knobs';
 export default { title: 'Others/Theme', component: ThemeProvider };
 
 export const withLocale = () => (
-	<ThemeProvider theme={{ isRTL: boolean('isRTL', false), locale: en_US }}>
+	<ThemeProvider
+		theme={{
+			isRTL: boolean('isRTL', false),
+			locale: en_US,
+		}}
+	>
 		<Fragment>
 			<HtmlDirection />
 			<Box>

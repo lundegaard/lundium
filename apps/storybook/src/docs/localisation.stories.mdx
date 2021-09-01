@@ -2,7 +2,9 @@
 
 ## Localisation
 
-For support of other locales than default english one, you can use localized messages from `@lundium/locale` lackage. In order to use it, we first have to import library into project:
+For support of other locales than default english one, you can use
+localized messages from `@lundium/locale` lackage. In order to use it,
+we first have to import library into project:
 
 ```bash
 yarn add @lundium/locale
@@ -12,7 +14,8 @@ yarn add @lundium/locale
 npm install @lundium/locale
 ```
 
-Then, we can load desired locale object into project and pass it to ThemeProvider component
+Then, we can load desired locale object into project and pass it to
+ThemeProvider component
 
 ```javascript
 import { cs_CZ } '@lundium/locale';
@@ -23,7 +26,9 @@ import cs_CZ from '@lundium/locale/cs_CZ';
 	...
 ```
 
-If you want to use only a part of predefined styles, you can use sass source files. They can be imported in a same way as you'd partialy import bootstrap files: (into you root scss file preferably)
+If you want to use only a part of predefined styles, you can use sass
+source files. They can be imported in a same way as you'd partialy
+import bootstrap files: (into you root scss file preferably)
 
 ```css
 @import 'node_modules/@lundium/theme-basic/scss/front.scss';

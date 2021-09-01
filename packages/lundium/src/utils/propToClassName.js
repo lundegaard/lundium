@@ -4,7 +4,8 @@ const getClassName = (prop, value, breakpoint) =>
 	(breakpoint === 'xs' ? [prop, value] : [prop, breakpoint, value]).join('-');
 
 /**
- * If `validationFunction` returns `true` than `cssProperty` and `responsiveCssValue` are converted to Bootstrap's classNames.
+ * If `validationFunction` returns `true` than `cssProperty` and
+ * `responsiveCssValue` are converted to Bootstrap's classNames.
  *
  * @see classNamesByBreakpoint
  *
@@ -14,7 +15,7 @@ const getClassName = (prop, value, breakpoint) =>
  */
 const propToClassName = validationFunction => property =>
 	classNamesByBreakpoint((value, breakpoint) =>
-		validationFunction(value) ? getClassName(property, value, breakpoint) : ''
+		validationFunction(value) ? getClassName(property, value, breakpoint) : '',
 	);
 
 export default propToClassName;

@@ -2,7 +2,10 @@ import React, { Fragment, useState } from 'react';
 import { BasicStaticModal, Button, StaticModal } from 'lundium';
 import { boolean } from '@storybook/addon-knobs';
 
-export default { title: 'Modals/StaticModal', component: StaticModal };
+export default {
+	title: 'Modals/StaticModal',
+	component: StaticModal,
+};
 
 export const basic = () =>
 	// Workaround to be able to see code in story

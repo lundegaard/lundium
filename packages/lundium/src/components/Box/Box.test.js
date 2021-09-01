@@ -30,9 +30,12 @@ describe('<Box />', () => {
 			testClassNames({ m: [] }, '');
 			testClassNames(
 				{ m: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 } },
-				'm-1 m-sm-2 m-md-3 m-lg-4 m-xl-5'
+				'm-1 m-sm-2 m-md-3 m-lg-4 m-xl-5',
 			);
-			testClassNames({ m: { xs: 1, sm: 2, md: 3, lg: 4 } }, 'm-1 m-sm-2 m-md-3 m-lg-4');
+			testClassNames(
+				{ m: { xs: 1, sm: 2, md: 3, lg: 4 } },
+				'm-1 m-sm-2 m-md-3 m-lg-4',
+			);
 			testClassNames({ m: { xs: 1, sm: 2, md: 3 } }, 'm-1 m-sm-2 m-md-3');
 			testClassNames({ m: { xs: 1, sm: 2 } }, 'm-1 m-sm-2');
 			testClassNames({ m: { xs: 1 } }, 'm-1');

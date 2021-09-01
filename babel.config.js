@@ -4,13 +4,17 @@ module.exports = api => {
 	const presets = [
 		[
 			'babel-preset-react-union',
-			{ test: process.env.NODE_ENV === 'test', loose: true, library: false, universal: false },
+			{
+				test: process.env.NODE_ENV === 'test',
+				loose: true,
+				library: false,
+				universal: false,
+			},
 		],
 	];
 
 	return {
 		presets,
-		// NOTE: Slightly increases bundle sizes, but with increasing number of components it can change
 		plugins: [
 			[
 				'babel-plugin-ramda',

@@ -6,10 +6,14 @@ export default { title: 'Others/Text', component: Text };
 export const weight = () => (
 	<Box>
 		<Text weight="bold">Bold text.</Text>
-		<Text weight="bolder">Bolder weight text (relative to the parent element).</Text>
+		<Text weight="bolder">
+			Bolder weight text (relative to the parent element).
+		</Text>
 		<Text weight="normal">Normal weight text.</Text>
 		<Text weight="light">Light weight text.</Text>
-		<Text weight="lighter">Lighter weight text (relative to the parent element).</Text>
+		<Text weight="lighter">
+			Lighter weight text (relative to the parent element).
+		</Text>
 	</Box>
 );
 

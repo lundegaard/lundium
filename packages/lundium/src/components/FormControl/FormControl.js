@@ -54,7 +54,7 @@ const FormControl = ({
 	invariant(
 		isCheckable || !hasFloatingLabel || value !== undefined,
 		`FormControl with name "${name}" must be a controlled component. ` +
-			'This is necessary for floating labels to function properly.'
+			'This is necessary for floating labels to function properly.',
 	);
 
 	return (

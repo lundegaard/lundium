@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import { cx } from 'ramda-extension';
 
 const Menu = forwardRef(({ children, size, className, ...rest }, ref) => (
-	<ul className={cx({ menu: true, [`menu--size-${size}`]: size }, className)} ref={ref} {...rest}>
+	<ul
+		className={cx({ menu: true, [`menu--size-${size}`]: size }, className)}
+		ref={ref}
+		{...rest}
+	>
 		{children}
 	</ul>
 ));

@@ -133,7 +133,9 @@ const Tooltip = ({
 				<div
 					{...getTooltipProps({
 						ref: tooltipRef,
-						className: cx('tooltip', { 'upper-case': isUpperCase }),
+						className: cx('tooltip', {
+							'upper-case': isUpperCase,
+						}),
 					})}
 				>
 					{showArrow && (
@@ -150,7 +152,10 @@ const Tooltip = ({
 			)}
 		>
 			{({ getTriggerProps, triggerRef }) =>
-				cloneElement(children, { ref: triggerRef, ...getTriggerProps() })
+				cloneElement(children, {
+					ref: triggerRef,
+					...getTriggerProps(),
+				})
 			}
 		</TooltipTrigger>
 	);

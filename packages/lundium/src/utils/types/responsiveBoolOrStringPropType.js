@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 
-const boolOrStringPropType = PropTypes.oneOfType([PropTypes.string, PropTypes.bool]);
+const boolOrStringPropType = PropTypes.oneOfType([
+	PropTypes.string,
+	PropTypes.bool,
+]);
 const boolOrStringArrayPropType = PropTypes.arrayOf(boolOrStringPropType);
 const boolOrStringObjectPropType = PropTypes.shape({
 	xs: boolOrStringPropType,

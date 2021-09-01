@@ -2,7 +2,10 @@ import React, { Fragment, useState } from 'react';
 import { Button, Notification, NotificationStack } from 'lundium';
 import { reject } from 'ramda';
 
-export default { title: 'Others/NotificationStack', component: NotificationStack };
+export default {
+	title: 'Others/NotificationStack',
+	component: NotificationStack,
+};
 
 const getNotification = id => ({
 	type: 'success',
@@ -37,7 +40,11 @@ export const basic = () =>
 						classNames: 'slide-from-right',
 					}}
 					renderNotification={({ type, id, ...rest }) => (
-						<Notification type={type} onClose={() => removeNotification(id)} {...rest}>
+						<Notification
+							type={type}
+							onClose={() => removeNotification(id)}
+							{...rest}
+						>
 							Notification content {id}
 						</Notification>
 					)}

@@ -54,25 +54,32 @@ All available components with usage examples can be found in our [Storybook docs
 
 ## Theming
 
-Lundium also comes with its own themes yoou can use it by including `@lundium/theme-basic` in your project.
-Learn how you can use our default theme in your project in more detail [Theming page](./packages/theme-basic/README.md).
+Lundium also comes with its own themes yoou can use it by including
+`@lundium/theme-basic` in your project. Learn how you can use our
+default theme in your project in more detail
+[Theming page](./packages/theme-basic/README.md).
 
 ## Localisation
 
-For localisation usecases you can use `@lundium/locale` package. Detailed walk-through can be found on [Localisation page](./packages/locale/README.md).
+For localisation usecases you can use `@lundium/locale` package.
+Detailed walk-through can be found on
+[Localisation page](./packages/locale/README.md).
 
 ## Contribution
 
 We are open to any ideas and suggestions! Feel free to make PR!
 
-See [contribution guide](https://github.com/lundegaard/lundium/blob/master/CONTRIBUTING.md) for guidelines.
-<br />
-<br />
+See
+[contribution guide](https://github.com/lundegaard/lundium/blob/master/CONTRIBUTING.md)
+for guidelines. <br /> <br />
 
 ## See our related projects
 
-- [@redux-tools](https://github.com/lundegaard/redux-tools) - Modular Redux is possible!
-- [react-union](https://github.com/lundegaard/react-union) - Intergrate React apps into various CMSs seamlessly.
-- [validarium](https://github.com/lundegaard/validarium) - Validations done right.
+- [@redux-tools](https://github.com/lundegaard/redux-tools) - Modular
+  Redux is possible!
+- [react-union](https://github.com/lundegaard/react-union) -
+  Intergrate React apps into various CMSs seamlessly.
+- [validarium](https://github.com/lundegaard/validarium) - Validations
+  done right.
 
 © 2020 Lundegaard a.s.

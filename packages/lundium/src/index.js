@@ -30,9 +30,17 @@ export { default as StaticModal } from './components/StaticModal';
 export { default as Text } from './components/Text';
 export { default as Textarea } from './components/Textarea';
 export { default as TextareaControl } from './components/TextareaControl';
-export { default as ThemeProvider, useTheme, ThemeConsumer } from './components/ThemeProvider';
+export {
+	default as ThemeProvider,
+	useTheme,
+	ThemeConsumer,
+} from './components/ThemeProvider';
 export { default as Toggle } from './components/Toggle';
-export { default as Tooltip, TooltipPlacements, TooltipTriggers } from './components/Tooltip';
+export {
+	default as Tooltip,
+	TooltipPlacements,
+	TooltipTriggers,
+} from './components/Tooltip';
 export {
 	default as SlideModal,
 	SlideModalContent,

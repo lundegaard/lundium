@@ -3,7 +3,10 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import { transitionShape } from './types';
 
-const withTransition = (Component, { trigger, TransitionComponent = CSSTransition }) => {
+const withTransition = (
+	Component,
+	{ trigger, TransitionComponent = CSSTransition },
+) => {
 	const WithTransition = ({ transition, ...otherProps }) => {
 		const visibilityTrigger = otherProps[trigger];
 

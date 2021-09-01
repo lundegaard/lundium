@@ -15,7 +15,9 @@ export const BasicSlideModal = ({
 	...otherProps
 }) => (
 	<SlideModal {...otherProps}>
-		{title && <SlideModalHeader title={title} subtitle={subtitle} details={details} />}
+		{title && (
+			<SlideModalHeader title={title} subtitle={subtitle} details={details} />
+		)}
 		<SlideModalContent>{children}</SlideModalContent>
 		{Footer && (
 			<SlideModalFooter>

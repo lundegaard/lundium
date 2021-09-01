@@ -25,7 +25,7 @@ const Button = forwardRef(
 			size,
 			...rest
 		},
-		ref
+		ref,
 	) => {
 		const C = rest.href || rest.to ? LinkComponent : 'button';
 		const attrs = !rest.href && !rest.to ? { type } : {};
@@ -42,7 +42,7 @@ const Button = forwardRef(
 						[`btn-${kind}`]: !blank && !outline,
 						[`btn-outline-${kind}`]: outline,
 					},
-					className
+					className,
 				)}
 				onClick={disabled ? noop : onClick}
 				disabled={disabled}
@@ -53,7 +53,7 @@ const Button = forwardRef(
 				{children}
 			</Text>
 		);
-	}
+	},
 );
 
 export const BUTTON_TYPES = valueMirror([

@@ -11,7 +11,9 @@ const boolPropToClassName = prefix =>
 			return breakpoint === 'xs' ? `${prefix}` : `${prefix}-${breakpoint}`;
 		}
 
-		return breakpoint === 'xs' ? `${prefix}-${value}` : `${prefix}-${breakpoint}-${value}`;
+		return breakpoint === 'xs'
+			? `${prefix}-${value}`
+			: `${prefix}-${breakpoint}-${value}`;
 	});
 
 const Card = ({ className, boxShadow, borderRadius, ...rest }) => (
@@ -20,7 +22,7 @@ const Card = ({ className, boxShadow, borderRadius, ...rest }) => (
 		className={cx(
 			boolPropToClassName('shadow')(boxShadow),
 			boolPropToClassName('border-radius')(borderRadius),
-			className
+			className,
 		)}
 	/>
 );
