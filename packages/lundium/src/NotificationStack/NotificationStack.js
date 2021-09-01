@@ -4,9 +4,9 @@ import { map } from 'ramda';
 import { cx } from 'ramda-extension';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import getParentContainer from '../../utils/getParentContainer';
+import getParentContainer from '../utils/getParentContainer';
 import Portal from '../Portal';
-import { transitionShape } from '../../utils/types';
+import { transitionShape } from '../utils/types';
 
 const defaultTransition = {
 	timeout: 500,

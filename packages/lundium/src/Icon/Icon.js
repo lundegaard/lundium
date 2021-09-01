@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'ramda-extension';
 
-import { stringOrNumberPropType } from '../../utils/types';
+import { stringOrNumberPropType } from '../utils/types';
 import Text from '../Text';
 
 const Icon = forwardRef(

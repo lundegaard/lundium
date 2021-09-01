@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { cx, flipIncludes, isNotNil, noop } from 'ramda-extension';
 import invariant from 'invariant';
 
-import FormGroupContext from '../../contexts/FormGroupContext';
-import isFilled from '../../utils/isFilled';
+import FormGroupContext from '../contexts/FormGroupContext';
+import isFilled from '../utils/isFilled';
 
 const isTypeCheckable = flipIncludes(['radio', 'checkbox']);
 

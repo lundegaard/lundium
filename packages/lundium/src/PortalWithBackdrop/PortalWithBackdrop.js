@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import Portal from '../Portal';
 import Backdrop from '../Backdrop';
-import findElementById from '../../utils/findElementById';
-import getParentContainer from '../../utils/getParentContainer';
+import findElementById from '../utils/findElementById';
+import getParentContainer from '../utils/getParentContainer';
 
 const addBodyClass = isVisible =>
 	isVisible
