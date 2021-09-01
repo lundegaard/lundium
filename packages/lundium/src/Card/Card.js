@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'ramda-extension';
 
-import classNamesByBreakpoint from '../../utils/classNamesByBreakpoint';
+import classNamesByBreakpoint from '../utils/classNamesByBreakpoint';
 import Box from '../Box';
 
 const boolPropToClassName = prefix =>

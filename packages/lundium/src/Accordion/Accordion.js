@@ -30,9 +30,12 @@ const Accordion = forwardRef(({ openItemIndex, className, children }, ref) => {
 		<Box className={cx('accordion', className)}>
 			{Children.map(children, (child, index) =>
 				cond([
-					[o(equals(AccordionItem), prop('type')), clone({ index, indexOpen, setIndexOpen })],
+					[
+						o(equals(AccordionItem), prop('type')),
+						clone({ index, indexOpen, setIndexOpen }),
+					],
 					[T, identity],
-				])(child)
+				])(child),
 			)}
 		</Box>
 	);
@@ -44,7 +47,10 @@ Accordion.propTypes = {
 	/** Children to be rendered in the main container. */
 	children: PropTypes.node,
 	/** Class name for root. */
-	className: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+	className: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.arrayOf(PropTypes.string),
+	]),
 	/** Index of open item. */
 	openItemIndex: PropTypes.number,
 };

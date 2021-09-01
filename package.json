@@ -14,6 +14,9 @@
 		"packages/*",
 		"apps/*"
 	],
+	"engines": {
+		"node": ">=12"
+	},
 	"scripts": {
 		"@build": "----- COMMANDS TO BUILD WHOLE LIBRARY -----",
 		"build": "yarn build:lundium-components && yarn build:lundium-theme-basic && yarn build:lundium-locale && yarn build:storybook",

@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { cx, noop } from 'ramda-extension';
 import PropTypes from 'prop-types';
 
-import withTransition from '../../utils/withTransition';
+import withTransition from '../utils/withTransition';
 import Icon from '../Icon';
 import Button from '../Button';
 import Box from '../Box';
 import PortalWithBackdrop from '../PortalWithBackdrop';
-import stopPropagation from '../../utils/stopPropagation';
+import stopPropagation from '../utils/stopPropagation';
 
 export const StaticModal = ({
 	children,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { cx } from 'ramda-extension';
 
 import Box from '../Box';
-import FormGroupContext from '../../contexts/FormGroupContext';
+import FormGroupContext from '../contexts/FormGroupContext';
 
 const FormGroup = ({
 	children,

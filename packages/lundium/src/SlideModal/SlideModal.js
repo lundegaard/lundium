@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { cx, noop } from 'ramda-extension';
 import PropTypes from 'prop-types';
 
-import withTransition from '../../utils/withTransition';
-import stopPropagation from '../../utils/stopPropagation';
+import withTransition from '../utils/withTransition';
+import stopPropagation from '../utils/stopPropagation';
 import Box from '../Box';
 import Grid from '../Grid';
 import Button from '../Button';

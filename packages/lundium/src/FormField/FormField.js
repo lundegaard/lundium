@@ -6,7 +6,7 @@ import Label from '../Label';
 import FormGroup from '../FormGroup';
 import FormText from '../FormText';
 import Box from '../Box';
-import useGeneratedID from '../../utils/useGeneratedID';
+import useGeneratedID from '../utils/useGeneratedID';
 
 const FormField = forwardRef(
 	(

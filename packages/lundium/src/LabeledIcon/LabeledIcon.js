@@ -4,7 +4,7 @@ import { cx } from 'ramda-extension';
 
 import Text from '../Text';
 import Icon from '../Icon';
-import stringOrNumberPropType from '../../utils/types/stringOrNumberPropType';
+import stringOrNumberPropType from '../utils/types/stringOrNumberPropType';
 
 const LabeledIcon = ({
 	children,

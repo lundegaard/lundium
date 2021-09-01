@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { compose, filter, fromPairs, map, omit, test, toPairs } from 'ramda';
 import { cx, isNilOrEmptyString } from 'ramda-extension';
 
-import classNamesByBreakpoint from '../../utils/classNamesByBreakpoint';
-import responsiveStringOrNumberPropType from '../../utils/types/responsiveStringOrNumberPropType';
+import classNamesByBreakpoint from '../utils/classNamesByBreakpoint';
+import responsiveStringOrNumberPropType from '../utils/types/responsiveStringOrNumberPropType';
 
 const propToClassName = prefix =>
 	classNamesByBreakpoint(
