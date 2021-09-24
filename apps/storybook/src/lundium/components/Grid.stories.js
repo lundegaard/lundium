@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from 'lundium';
 import { boolean } from '@storybook/addon-knobs';
 
-export default { title: 'Grid', component: Grid };
+export default { title: 'Others/Grid', component: Grid };
 
 const border = {
 	border: '1px solid gray',

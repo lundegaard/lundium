@@ -2,7 +2,7 @@ import React from 'react';
 import { select } from '@storybook/addon-knobs';
 import { Tooltip, TooltipPlacements } from 'lundium';
 
-export default { title: 'Tooltip', component: Tooltip };
+export default { title: 'Others/Tooltip', component: Tooltip };
 
 export const basic = () => (
 	<Tooltip

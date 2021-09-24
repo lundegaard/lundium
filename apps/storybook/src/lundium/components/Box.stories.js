@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from 'lundium';
 
-export default { title: 'Box', component: Box };
+export default { title: 'Others/Box', component: Box };
 
 const styleObject = {
 	height: 100,

@@ -5,7 +5,7 @@ import Box from '../Box';
 import Button from '../Button';
 import Grid from '../Grid';
 import Text from '../Text';
-import { BasicStaticModal } from '../StaticModal';
+import BasicStaticModal from '../BasicStaticModal';
 import { useTheme } from '../ThemeProvider';
 
 const ConfirmationModal = ({

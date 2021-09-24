@@ -1,5 +1,5 @@
 module.exports = {
-	stories: ['../src/**/*.stories.(js|mdx)'],
+	stories: ['../src/**/*.stories.@(js|mdx)'],
 	addons: [
 		// Issue with propTypes load - https://github.com/storybookjs/storybook/issues/8435
 		'@storybook/addon-docs',

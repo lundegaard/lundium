@@ -2,7 +2,7 @@ import React from 'react';
 import { cx } from 'ramda-extension';
 import PropTypes from 'prop-types';
 
-import StaticModal from './StaticModal';
+import StaticModal from '../StaticModal';
 
 const BasicStaticModal = ({ className, children, footer, titleCenter, title, ...otherProps }) => (
 	<StaticModal className={cx(footer && ['modal--with-footer'], className)} {...otherProps}>

@@ -13,4 +13,5 @@ module.exports = {
 		'/node_modules/(?!intl-messageformat|intl-messageformat-parser).+\\.js$',
 	],
 	verbose: true,
+	testEnvironment: 'jsdom',
 };

@@ -9,7 +9,10 @@ import sortStories from './util/sortStories';
 
 addParameters({
 	options: {
-		storySort: sortStories({ Introduction: ['Welcome', 'Theming', 'Localisation'] }),
+		storySort: {
+			method: sortStories({ Introduction: ['Welcome', 'Theming', 'Localisation'] }),
+			order: ['Introduction', ['Welcome', 'Theming', 'Localisation'], 'Form', 'Modals', 'Others'],
+		},
 		showRoots: true,
 	},
 });

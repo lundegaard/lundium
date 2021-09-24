@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text } from 'lundium';
 
-export default { title: 'Text', component: Text };
+export default { title: 'Others/Text', component: Text };
 
 export const weight = () => (
 	<Box>

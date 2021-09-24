@@ -2,7 +2,7 @@ import React from 'react';
 import { LabeledIcon } from 'lundium';
 import { theme } from '@lundium/theme-basic';
 
-export default { title: 'LabeledIcon', component: LabeledIcon };
+export default { title: 'Others/LabeledIcon', component: LabeledIcon };
 
 const statisticsIcon = theme.iconTypes.find(type => type === 'statistics');
 

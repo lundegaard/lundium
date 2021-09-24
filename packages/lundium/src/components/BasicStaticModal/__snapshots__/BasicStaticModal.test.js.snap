@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BasicStaticModal /> matches snapshot when shallowly rendered 1`] = `
+<WithTransition
+  className=""
+>
+  <div
+    className="modal__title"
+  >
+    Modal title
+  </div>
+  <div
+    className="modal__content"
+  >
+    <div>
+      Some content
+    </div>
+  </div>
+</WithTransition>
+`;
