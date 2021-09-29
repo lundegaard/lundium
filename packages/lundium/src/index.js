@@ -1,3 +1,5 @@
+export { default as Accordion } from './components/Accordion';
+export { default as AccordionItem } from './components/AccordionItem';
 export { default as Backdrop } from './components/Backdrop';
 export { default as BasicStaticModal } from './components/BasicStaticModal';
 export { default as Box } from './components/Box';
