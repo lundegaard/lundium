@@ -1,0 +1,78 @@
+/*
+ -  Accordion
+ */
+
+ .accordion-item {
+	margin-bottom: ( $spacer / 2 );
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $theme-white;
+	color: $text-color;
+	padding: ( $spacer * .75 ) $spacer;
+	font-size: $accordion-title-font-size;
+	font-weight: $font-weight-bold;
+	line-height: $accordion-line-height;
+	cursor: pointer;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: .9s;
+	border-radius: $border-radius;
+
+	& > p {
+		margin-bottom: 0;
+		padding-right: $spacer;
+	}
+
+	&-dark {
+		background-color: $text-color;
+		color: $accordion-bg;
+		transition: 0s;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&--open {
+		.icon {
+			margin-top: -( $spacer / 4 );
+			transform: rotate(180deg);
+		}
+	}
+
+	&.highlighted {
+		background-color: $text-color;
+		color: $accordion-bg;
+	}
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.accordion-panel {
+	&--open {
+		display: block;
+	}
+	display: none;
+	overflow: hidden;
+	padding: ( $spacer / 2 ) $spacer $spacer $spacer;
+	font-size: $accordion-desc-font-size;
+	line-height: $accordion-line-height;
+	background-color: $theme-white;
+
+	ol,
+	ul {
+		margin-bottom: $spacer;
+	}
+
+	li {
+		font-size: $accordion-desc-font-size;
+	}
+}
+
+

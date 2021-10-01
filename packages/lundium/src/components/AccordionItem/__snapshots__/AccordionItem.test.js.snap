@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionItem /> matches snapshot when shallowly rendered 1`] = `
+<forwardRef(Box)
+  className="accordion-item"
+>
+  <AccordionHeader
+    setIndexOpen={[Function]}
+  >
+    <Icon
+      size={6}
+      type="caret-down"
+    />
+  </AccordionHeader>
+  <AccordionPanel />
+</forwardRef(Box)>
+`;
