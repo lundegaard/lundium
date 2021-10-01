@@ -2,6 +2,9 @@ public
 build
 lib
 dist
+stage
+auth_template
+nbproject
 stats.json
 
 apps/**/lib
@@ -16,6 +19,8 @@ services/**/public
 
 packages/**/lib
 packages/**/build
+
+libs/**/src/vendor/*
 
 .stylelintcache
 
@@ -150,6 +155,9 @@ jspm_packages/
 
 # TypeScript v1 declaration files
 typings/
+
+# Optional yarn cache directory
+.yarn
 
 # Optional npm cache directory
 .npm

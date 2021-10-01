@@ -1,5 +1,5 @@
 <h1 align="center">
-    Lundium UI
+Lundium
 </h1>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <h3 align="center">
-🖍️ 🛡  🚀
+🖍️ 🛡 🚀
 </h3>
 
 <h3 align="center">
@@ -32,7 +32,7 @@ A library of UI components used across Lundegaard projects. Goal of this library
   </a>
 
    <a href="https://www.npmjs.com/package/lundium">
-    <img src=" https://flat.badgen.net/npm/v/lundium" alt="Version" />
+    <img src="https://flat.badgen.net/npm/v/lundium" alt="Version" />
   </a>
 </p>
 
@@ -48,19 +48,6 @@ yarn add lundium
 npm install lundium
 ```
 
-## Documentation
-
-All available components with usage examples can be found in our [Storybook docs](https://lundium.netlify.app)
-
-## Theming
-
-Lundium also comes with its own themes yoou can use it by including `@lundium/theme-basic` in your project.
-Learn how you can use our default theme in your project in more detail [Theming page](./packages/theme-basic/README.md).
-
-## Localisation
-
-For localisation usecases you can use `@lundium/locale` package. Detailed walk-through can be found on [Localisation page](./packages/locale/README.md).
-
 ## Contribution
 
 We are open to any ideas and suggestions! Feel free to make PR!
@@ -74,5 +61,6 @@ See [contribution guide](https://github.com/lundegaard/lundium/blob/master/CONTR
 - [@redux-tools](https://github.com/lundegaard/redux-tools) - Modular Redux is possible!
 - [react-union](https://github.com/lundegaard/react-union) - Intergrate React apps into various CMSs seamlessly.
 - [validarium](https://github.com/lundegaard/validarium) - Validations done right.
+- [eslint-config-lundegaard](https://github.com/lundegaard/eslint-config-lundegaard) - Have a good start with your next JavaScript project.
 
-© 2020 Lundegaard a.s.
+© 2021 Lundegaard a.s.

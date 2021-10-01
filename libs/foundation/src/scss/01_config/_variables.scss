@@ -1,0 +1,34 @@
+/*
+ -  Theme variables
+ -
+ -  This file defines new variables and extends standards variables from Bootstrap.
+ */
+
+// Try to organize variables in named block groups with certain concern
+
+// Colors
+@import '01_variables/colors';
+
+// Grid
+@import '01_variables/grid';
+
+// Icons
+@import '01_variables/icons';
+
+// Accordion
+@import '01_variables/accordion';
+
+// General styling
+@import '01_variables/general';
+
+// Javascript export
+/* stylelint-disable */
+/* :export {
+	gutterWidth: $grid-gutter-width;
+	screenSM: map-get( $grid-breakpoints, 'sm' );
+	screenMD: map-get( $grid-breakpoints, 'md' );
+	screenLG: map-get( $grid-breakpoints, 'lg' );
+	screenXL: map-get( $grid-breakpoints, 'xl' );
+	primaryColor: $primary;
+	secondaryColor: $secondary;
+} */

@@ -1,6 +1,6 @@
 module.exports = {
 	root: true,
-	extends: ['react-union'],
+	extends: ['lundegaard'],
 	plugins: ['react-hooks'],
 	rules: {
 		'import/order': ['error', { 'newlines-between': 'always' }],
@@ -21,7 +21,7 @@ module.exports = {
 			'error',
 			{
 				devDependencies: [
-					'packages/**/*.test.js',
+					'libs/**/*.test.js',
 					'apps/**/*.test.js',
 					'apps/**/.storybook/*',
 					'apps/**/*.stories.js',
@@ -29,7 +29,7 @@ module.exports = {
 					'api/**/*',
 					'*.config.js',
 					'apps/**/*.config.js',
-					'packages/**/*.config.js',
+					'libs/**/*.config.js',
 					'**/copy-files.js',
 				],
 			},

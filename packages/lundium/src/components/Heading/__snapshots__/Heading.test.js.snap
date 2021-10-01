@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Heading /> shallow 1`] = `
-<forwardRef(Text)
-  as="h2"
-  className=""
-/>
-`;

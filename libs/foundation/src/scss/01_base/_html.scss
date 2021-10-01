@@ -1,0 +1,11 @@
+/*
+ -  Master styles
+ -
+ -  This file defines <html> and <body> styles.
+ */
+
+html,
+body {
+	@include selection;
+	font-family: 'Open Sans', sans-serif;
+}

@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Textarea /> matches snapshot when shallowly rendered 1`] = `
-<forwardRef(FormField)
-  control={[Function]}
-  kind="textarea"
-  validate={Array []}
-/>
-`;

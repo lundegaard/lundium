@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<FormText /> matches snapshot when shallowly rendered 1`] = `
-<forwardRef(Text)
-  className=""
-/>
-`;

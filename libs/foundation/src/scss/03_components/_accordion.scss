@@ -1,0 +1,25 @@
+/*
+ -  Accordion
+ */
+
+
+.accordion {
+	border: 1px solid darken($theme-white, 5%);
+
+	& + .accordion {
+		margin-top: -1px;
+	}
+
+	&__header {
+		padding: $accordion-header-padding;
+		background-color: $accordion-header-bg-color;
+	}
+
+	&__btn {
+		padding: 0;
+	}
+
+	&__content {
+		padding: $accordion-content-padding;
+	}
+}

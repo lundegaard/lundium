@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<TabBar /> matches snapshot when shallowly rendered 1`] = `
-<forwardRef(Box)
-  className="tab-bar"
-/>
-`;

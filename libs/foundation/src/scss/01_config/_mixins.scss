@@ -1,0 +1,186 @@
+/*
+ -	Theme mixins
+ -
+ -	This file defines new mixins and extends standards mixins from Bootstrap.
+ */
+
+/*
+ -	Font-size mixin
+ -
+ -	Mixin for rem font sizing with fallback, use it with only if you need browser support < IE11
+ -	@param {Number} [size-value] - Size of text
+ */
+
+@mixin font-size($size-value: 16) {
+	font-size: $size-value + px;
+	font-size: ($size-value / 10) + rem;
+}
+
+
+/*
+ -  Disabled outline
+ */
+
+@mixin clear-outline() {
+	outline: none;
+	outline: 0;
+}
+
+
+/*
+ -  Placeholder
+ -
+ -  Change color of font in placeholder for input
+ -  @param {HEX Color} [color]
+ */
+
+@mixin custom-placeholder($color) {
+	/* WebKit browsers */
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	/* Mozilla Firefox 4 to 18 */
+	&:-moz-placeholder {
+		color: $color;
+	}
+
+	/* Mozilla Firefox 19+ */
+	&::-moz-placeholder {
+		color: $color;
+	}
+
+	/* Internet Explorer 10+ */
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+
+/*
+ -  Selection Style
+ -
+ -  Change appearence of highlighted text
+ -  @param {HEX Color} [highlight-color]
+ -  @param {HEX Color} [font-color]
+ */
+
+@mixin selection($highlight-color: $theme-black, $font-color: $theme-white) {
+	::selection {
+		background-color: $highlight-color;
+		color: $font-color;
+	}
+
+	::-moz-selection {
+		background-color: $highlight-color;
+		color: $font-color;
+	}
+}
+
+
+/*
+ -	Reset parameters padding and margin
+ -	@param {Number} [value=0] - Set padding and margin to all sides
+ */
+
+@mixin reset-pa-ma($value: 0) {
+	padding: $value;
+	margin: $value;
+}
+
+
+/*
+ -	Micro-clearfix method
+ */
+
+@mixin after-clear() {
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
+		height: 0;
+	}
+}
+
+
+/*
+ -  Font-face declaration for custom typography
+ -  Comment out src block for more source font files if support for older browsers is needed
+ -  @param {String} [font-name] - Name of the font family
+ -  @param {url} [file-name] - URL address for font files
+ -  @param {Number} [weight=400] - Weight or boldness of the font
+ -  @param {String} [style=normal] - Face of the font-family (normal, italic or oblique)
+ */
+
+@mixin font-face($font-name, $file-name, $weight: 400, $style: normal, $version: random(100)) {
+	@font-face {
+		font-family: quote($font-name);
+		/*
+		src: url($file-name + '.eot');
+		src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+			url($file-name + '.woff') format('woff'),
+			url($file-name + '.ttf')  format('truetype'),
+			url($file-name + '.svg##{$font-name}')  format('svg');
+		*/
+		src: url($file-name + '.ttf')  format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+
+/*
+ -	Absolute positioning of element to the center
+ -	@param {Boolean} [vertical=true] - Vertical positioning of the element
+ -	@param {Boolean} [horizontal=true] - Horizontal positioning of the element
+ */
+
+@mixin absolute-center($vertical: true, $horizontal: true) {
+	position: absolute;
+	display: block;
+
+	@if $vertical == true and $horizontal == false {
+		top: 50%;
+		transform: translateY(-50%);
+	} @else if $horizontal == true and $vertical == false {
+		left: 50%;
+		transform: translateX(-50%);
+	} @else if $horizontal == true and $vertical == true {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+/*
+ -	Center positioning of the block content
+ -	@param {String} [mode=row] - Direction of block elements in flex box (row or column)
+ -	@param {Boolean} [vertical=true] - Vertical positioning of the element
+ -	@param {Boolean} [horizontal=true] - Horizontal positioning of the element
+ */
+
+@mixin center-content($mode: row, $horizontal: true, $vertical: true) {
+	display: flex;
+	flex-direction: $mode;
+
+	@if $mode == row {
+		@if $vertical == true and $horizontal == false {
+			align-items: center;
+		} @else if $horizontal == true and $vertical == false {
+			justify-content: center;
+		} @else if $horizontal == true and $vertical == true {
+			justify-content: center;
+			align-items: center;
+		}
+	} @else if $mode == column {
+		@if $vertical == true and $horizontal == false {
+			justify-content: center;
+		} @else if $horizontal == true and $vertical == false {
+			align-items: center;
+		} @else if $horizontal == true and $vertical == true {
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
