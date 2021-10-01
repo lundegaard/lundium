@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, Text } from 'lundium';
 
-export default { title: 'Tabs', component: Tabs };
+export default { title: 'Others/Tabs', component: Tabs };
 
 export const basic = () => (
 	<Tabs>

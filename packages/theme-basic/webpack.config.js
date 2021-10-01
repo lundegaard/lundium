@@ -15,12 +15,14 @@ module.exports = {
 	},
 	plugins: [
 		new MiniCssExtractPlugin(),
-		new CopyWebpackPlugin([
-			{
-				from: 'src/scss',
-				to: 'scss',
-			},
-		]),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: 'src/scss',
+					to: 'scss',
+				},
+			],
+		}),
 	],
 	module: {
 		rules: [
@@ -35,7 +37,19 @@ module.exports = {
 			{
 				test: /\.s(a|c)ss$/,
 				exclude: /node_modules/,
-				loader: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+				use: [
+					{ loader: MiniCssExtractPlugin.loader },
+					{
+						loader: 'css-loader',
+						options: {
+							modules: {
+								compileType: 'icss',
+							},
+						},
+					},
+					{ loader: 'postcss-loader' },
+					{ loader: 'sass-loader' },
+				],
 			},
 			{
 				test: /\.woff(2)?(\?[a-z0-9]+)?$/,

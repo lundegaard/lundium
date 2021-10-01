@@ -7,7 +7,7 @@ const styles = {
 	root: { textAlign: 'center', component: Icon },
 };
 
-export default { title: 'Icon' };
+export default { title: 'Others/Icon', component: Icon };
 
 export const basic = () => (
 	<div style={styles.root}>

@@ -1,4 +1,5 @@
 export { default as Backdrop } from './components/Backdrop';
+export { default as BasicStaticModal } from './components/BasicStaticModal';
 export { default as Box } from './components/Box';
 export { default as Button, BUTTON_TYPES } from './components/Button';
 export { default as Checkbox } from './components/Checkbox';
@@ -23,7 +24,7 @@ export { default as PortalWithBackdrop } from './components/PortalWithBackdrop';
 export { default as Radio } from './components/Radio';
 export { default as RadioControl } from './components/RadioControl';
 export { default as Spinner } from './components/Spinner';
-export { default as StaticModal, BasicStaticModal } from './components/StaticModal';
+export { default as StaticModal } from './components/StaticModal';
 export { default as Text } from './components/Text';
 export { default as Textarea } from './components/Textarea';
 export { default as TextareaControl } from './components/TextareaControl';

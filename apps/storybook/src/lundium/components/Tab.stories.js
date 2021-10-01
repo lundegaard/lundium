@@ -2,7 +2,7 @@ import React from 'react';
 import { boolean } from '@storybook/addon-knobs';
 import { Tab } from 'lundium';
 
-export default { title: 'Tab', component: Tab };
+export default { title: 'Others/Tab', component: Tab };
 
 export const basic = () => (
 	<Tab

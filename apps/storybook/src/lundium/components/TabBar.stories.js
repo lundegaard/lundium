@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tab, TabBar } from 'lundium';
 
-export default { title: 'TabBar', component: TabBar };
+export default { title: 'Others/TabBar', component: TabBar };
 
 export const basic = () => (
 	<TabBar>
