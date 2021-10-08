@@ -1,0 +1,54 @@
+/*
+ -  Front ALL
+ -
+ -  This file includes and describes all used styles.
+ */
+
+/* -------------------------- */
+/*   1. CONFIG,BASE,VENDORS   */
+/* -------------------------- */
+
+@import '01_config/variables';                                           // Variables
+@import '01_vendors/bootstrap_init';                                     // Bootstrap (http://getbootstrap.com)
+@import '01_config/mixins';                                              // Mixins
+@import '01_base/utilities';                                             // Utilities
+@import '01_base/html';                                                  // HTML and Body styles
+@import '01_base/master';                                                // Master styles
+@import '01_base/icons';                                                 // Icons
+@import '01_base/typography';                                            // Typography
+
+
+/* -------------------------- */
+/*   DEVELOPMENT UTILITIES    */
+/* -------------------------- */
+
+@import '00_dev/mp';                                                    // Master page
+@import '00_dev/viewports';                                             // Viewports
+
+
+/* ------------------------- */
+/*   2. LAYOUT               */
+/* ------------------------- */
+
+@import '02_layout/header';                                              // Header
+@import '02_layout/footer';                                              // Footer
+@import '02_layout/content';                                             // Content
+
+
+/* ------------------------- */
+/*   3. COMPONENTS           */
+/* ------------------------- */
+
+// Seperate and sort partials into blocks with different concerns if there's too much partials
+
+/*   3.1 UI (example)     */
+/* ------------------------- */
+
+@import '03_components/accordion';                                       // Accordion
+
+
+/* ------------------------- */
+/*   4. MODULES              */
+/* ------------------------- */
+
+@import '04_modules/module';                                             // Describe your module in a meaningful way

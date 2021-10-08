@@ -1,0 +1,12 @@
+/*
+ -  Theme icons
+ -
+ -  This file contains all used custom icons.
+ */
+
+
+@each $icon in $icons {
+	.icon-#{$icon}::before {
+		icon-font: url('../assets/images/icons/#{$icon}.svg');
+	}
+}

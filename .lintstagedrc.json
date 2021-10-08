@@ -1,0 +1,6 @@
+{
+	"**/*.js": ["prettier --write", "yarn lint:js --fix"],
+	"**/*.{mdx,md,html,json}": ["prettier --write"],
+	"**/*.css": ["stylelint"],
+	"**/*.scss": ["stylelint --syntax=scss"]
+}

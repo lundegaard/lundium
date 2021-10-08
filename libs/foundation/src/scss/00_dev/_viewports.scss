@@ -1,0 +1,17 @@
+/*
+ -	Viewport Helper
+ */
+
+
+.debug-viewports {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	&__viewport {
+		@include font-size(8);
+		padding: 4px 8px;
+		background-color: $theme-blue;
+		color: $theme-white;
+	}
+}

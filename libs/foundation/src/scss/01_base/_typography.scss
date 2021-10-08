@@ -1,0 +1,39 @@
+/*
+ -  Theme typography
+ -
+ -  This file contains @font-face declarations.
+ */
+
+/*
+ -	Open Sans
+ */
+
+// Font weight: Light
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-light', 300);
+
+// Font weight: Light Italic
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-light-italic', 300, italic);
+
+// Font weight: Regular
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-regular', 400);
+
+// Font weight: Italic
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-italic', 400, italic);
+
+// Font weight: Semi-Bold
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-semi-bold', 600);
+
+// Font weight: Semi-Bold Italic
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-semi-bold-italic', 600, italic);
+
+// Font weight: Bold
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-bold', 700);
+
+// Font weight: Bold Italic
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-bold-italic', 700, italic);
+
+// Font weight: Extra-Bold
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-extra-bold', 800);
+
+// Font weight: Extra-Bold Italic
+@include font-face('Open Sans', '../assets/fonts/open-sans/open-sans-extra-bold-italic', 800, italic);

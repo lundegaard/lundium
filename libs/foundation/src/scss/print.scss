@@ -1,0 +1,17 @@
+/*
+ - Custom Print Styles
+ -
+ - This styles is applied only when user is printing out web page from browser.
+ - Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
+ */
+
+@import '01_config/variables';                                           // Variables
+@import '01_config/mixins';                                              // Mixins
+@import '01_base/icons';                                                 // Icons
+@import '01_base/typography';                                            // Typography
+// @import '01_base/scaffolding';                                           // Root and body elements
+
+/* Media print */
+@media print {
+	@import '05_print/default';                                          // Print
+}

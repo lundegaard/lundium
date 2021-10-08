@@ -1,0 +1,21 @@
+/*
+ -  Utility classes
+ -
+ -  This file defines reusable utility classes.
+ */
+
+
+.disabled {
+	opacity: $disabled-opacity;
+	cursor: not-allowed;
+	color: $disabled-color;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:focus:hover,
+	&:active:hover {
+		color: $disabled-color;
+		text-decoration: none;
+	}
+}
