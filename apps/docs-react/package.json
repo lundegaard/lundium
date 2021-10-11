@@ -9,12 +9,12 @@
 		"build": "build-storybook -o ../../build/storybook"
 	},
 	"devDependencies": {
-		"@storybook/addon-actions": "^6.3.1",
-		"@storybook/addon-docs": "^6.3.1",
-		"@storybook/addon-links": "^6.3.1",
-		"@storybook/addon-storysource": "^6.3.1",
-		"@storybook/addons": "^6.3.1",
-		"@storybook/react": "^6.3.1"
+		"@storybook/addon-actions": "^6.3.10",
+		"@storybook/addon-docs": "^6.3.10",
+		"@storybook/addon-links": "^6.3.10",
+		"@storybook/addon-storysource": "^6.3.10",
+		"@storybook/addons": "^6.3.10",
+		"@storybook/react": "^6.3.10"
 	},
 	"peerDependencies": {
 		"ramda": "^0.27.1",

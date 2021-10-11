@@ -7,21 +7,6 @@ auth_template
 nbproject
 stats.json
 
-apps/**/lib
-apps/**/build
-apps/**/public
-
-modules/**/build
-modules/**/public
-
-services/**/build
-services/**/public
-
-packages/**/lib
-packages/**/build
-
-libs/**/src/vendor/*
-
 .stylelintcache
 
 # Apple cache file
@@ -321,3 +306,7 @@ tags
 .env.test.local
 .env.production
 .env.production.local
+
+# Custom
+es
+lib
