@@ -1,16 +1,14 @@
-const settings = require('../webpack.settings.js');
+const settings = require('../webpack.settings');
 
-const faviconPlugin = () => {
-	return {
-		logo: `${settings.paths.src.assets}/favicon/favicon.png`,
-		icons: {
-			appleStartup: false,
-			firefox: false,
-		},
-		prefix: 'favicons/',
-	};
-};
+const faviconPlugin = () => ({
+	logo: `${settings.paths.src.assets}/favicon/favicon.png`,
+	icons: {
+		appleStartup: false,
+		firefox: false,
+	},
+	prefix: 'favicons/',
+});
 
 module.exports = {
-	faviconPlugin: faviconPlugin,
+	faviconPlugin,
 };

@@ -19,11 +19,11 @@ git checkout -b my-topic-branch`
    - Make one or more atomic commits. Use interactive rebase or amend if necessary.
 5. Visit GitHub and make your pull request.
 
-For synchronizing master branch between fork and lundegaard repository:
+For synchronizing main branch between fork and lundegaard repository:
 
 ```sh
 git remote add upstream git@github.com:lundegaard/lundium.git
-git checkout master
+git checkout main
 git fetch upstream
-git merge upstream/master
+git merge upstream/main
 ```

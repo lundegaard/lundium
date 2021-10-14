@@ -1,6 +1,7 @@
 const path = require('path');
+
 const p = x => path.resolve(__dirname, '..', x);
-const pkg = require(p('./package.json'))
+const pkg = require(p('./package.json'));
 
 module.exports = {
 	name: pkg.name,
@@ -11,7 +12,7 @@ module.exports = {
 			scss: p('./src/scss/'),
 			js: p('./src/js/'),
 			pages: p('./src/static/pages/'),
-			assets: p('./src/assets/')
+			assets: p('./src/assets/'),
 		},
 		dist: {
 			base: p('./public/'),

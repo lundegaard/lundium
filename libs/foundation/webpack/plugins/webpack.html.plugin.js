@@ -1,8 +1,9 @@
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
 
-const settings = require('../webpack.settings.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const settings = require('../webpack.settings');
 
 // Configure Html webpack
 const htmlPlugins = () => {
@@ -24,5 +25,5 @@ const htmlPlugins = () => {
 };
 
 module.exports = {
-	htmlPlugins: htmlPlugins,
+	htmlPlugins,
 };

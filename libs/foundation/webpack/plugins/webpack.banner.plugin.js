@@ -1,16 +1,19 @@
 const moment = require('moment');
-const settings = require('../webpack.settings.js');
+
+const settings = require('../webpack.settings');
 const pkg = require('../../package.json');
 
-// Configure file banner
 const bannerPlugin = () => {
+	const formatL = moment().format('llll');
+	const formatY = moment().format('YYYY');
+
 	return {
 		banner: [
 			'/*!',
-			' * ' + settings.name,
-			' * @author ' + pkg.author,
-			' * @build  ' + moment().format('llll') + 'GMT+1',
-			' * Copyright (c) ' + moment().format('YYYY') + ' ' + settings.copyright,
+			` * ${settings.name}`,
+			` * @author ${pkg.author}`,
+			` * @build ${formatL}GMT+1`,
+			` * Copyright (c) ${formatY} ${settings.copyright}`,
 			' *',
 			' */',
 		].join('\n'),
@@ -19,5 +22,5 @@ const bannerPlugin = () => {
 };
 
 module.exports = {
-	bannerPlugin: bannerPlugin,
+	bannerPlugin,
 };

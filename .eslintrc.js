@@ -1,7 +1,11 @@
 module.exports = {
 	root: true,
-	extends: ['lundegaard'],
-	plugins: ['react-hooks'],
+	env: {
+		es6: true,
+		browser: true,
+		node: true,
+	},
+	extends: ['eslint-config-lundegaard'],
 	rules: {
 		'import/order': ['error', { 'newlines-between': 'always' }],
 		'sort-imports': [
@@ -13,8 +17,6 @@ module.exports = {
 				memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
 			},
 		],
-		'react-hooks/rules-of-hooks': 'error',
-		'react-hooks/exhaustive-deps': 'warn',
 		// for qraphql queries
 		'react/prop-types': ['error', { ignore: ['data'] }],
 		'import/no-extraneous-dependencies': [
@@ -31,9 +33,5 @@ module.exports = {
 				],
 			},
 		],
-		// conflicts with Prettier
-		'react/jsx-max-props-per-line': 0,
-		'react/jsx-fragments': [2, 'element'],
-		'react/jsx-curly-brace-presence': [2, 'never'],
 	},
 };

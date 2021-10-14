@@ -142,7 +142,7 @@ jspm_packages/
 typings/
 
 # Optional yarn cache directory
-.yarn
+.yarn/
 
 # Optional npm cache directory
 .npm
